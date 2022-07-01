@@ -1,0 +1,450 @@
+<style>.plus-preco,.preco{background-color:transparent}.plus-preco,.preco-prod{-webkit-box-orient:horizontal;-webkit-box-direction:normal}.euro,.preco{font-family:'Roboto Condensed',sans-serif}.preco{color:#000;font-size:20px;font-style:normal}.antes-preco,.text-span-5{font-weight:700}.preco.off{-ms-transform:none;transform:none;color:#fff;font-size:23px}.plus-preco{position:static;left:auto;top:-2%;right:-2%;bottom:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;margin-top:12px;margin-right:0;padding:0 10px;float:right;clear:none;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:transparent;font-size:22px}.preco-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:26px;margin-left:5px;padding:3px 5px 3px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background-color:#ffea2d;color:#fff;text-align:center}.preco-prod.off{margin-left:-5px;background-color:#e20c18;background-image:linear-gradient(220deg,#f40000,#d90000);}.euro{font-size:.6em}.antes-preco{margin-right:10px;margin-left:auto;color:#000;font-size:12px;line-height:12px;text-align:right}.text-span-5{color:#e22418;font-size:15px;line-height:10px}.slashed{font-weight:700;text-decoration:line-through}@media screen and (max-width:991px){.plus-preco{margin-top:5px;margin-right:4px;padding:4px}}@media screen and (max-width:767px){.plus-preco{margin-top:4px;margin-right:4px;padding:4px}}@media screen and (max-width:479px){.plus-preco,.preco-prod{-webkit-box-direction:normal}.preco{font-family:'Roboto Condensed',sans-serif;font-size:16px;line-height:11px;font-weight:700}.preco.off{font-size:15px}.plus-preco{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-top:10px;margin-right:0;margin-left:0;padding:2px 0;-webkit-box-orient:horizontal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.preco-prod{height:auto;margin-bottom:auto;padding:5px;-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.preco-prod.off{margin-left:0;padding:6px 3px}.euro{font-size:14px}.antes-preco{margin-right:7px;font-size:8px}.antes-preco.riscado{margin-right:5px}.text-span-5{font-size:12px;line-height:9px}.slashed{font-size:10px}}</style>
+<style>
+  /* fix sidebar */
+  .sportspage__introfloor .sportspage__nav-item {
+    display: none;
+  }
+
+  .sportspage .sportspage__navigation {
+    display: none;
+    visibility: hidden;
+    width: 0px;
+  }
+
+  .sportspage .sportspage__floor {
+    padding-left: 0px !important;
+  }
+
+  .sportspage .sportspage__freeHtmlfloor {
+    padding-left: 0px !important;
+  }
+
+  @media screen and (min-width: 801px) {
+    .sportspage__floors {
+      padding-left: 0px !important;
+    }
+
+    .sportspage__introfloor .card {
+      text-align: center;
+    }
+
+    .sportspage__introfloor h2 {
+      font-size: 36px;
+    }
+
+    .sportspage__introfloor p {
+      font-size: 17px;
+      margin-top: 20px;
+    }
+  }
+
+  /* end of fix sidebar */
+</style>
+
+<style>
+    .cta-embed {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto
+    }
+
+    .sportpage-dkt {
+        padding-bottom: 40px;
+        max-width: 1520px;
+        margin: auto;
+    }
+
+    #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.a>div>div.prod-description>div.preco-box.w-embed {
+        margin: 5px 0
+    }
+
+    #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.b>div>div.prod-description>div.preco-box.w-embed {
+        margin: 5px 0
+    }
+
+    .sportpage-columns {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 380px;
+        padding-top: 40px;
+        padding-bottom: 40px
+    }
+
+    .sp-50 {
+        background-size: cover;
+        background-position: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 45%;
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
+        text-decoration: none
+    }
+
+    .sp-50._01a {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll
+    }
+
+    .sp-50._02a {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    .prod-titulo {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 80px;
+        margin-top: auto;
+        padding: 10px;
+        background-color: rgb(0 0 0 / 50%)
+    }
+
+    .prod-titulo._3line {
+        display: block;
+        height: 120px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center
+    }
+
+    .prod-titulo.full {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 40%;
+        height: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: 40px
+    }
+
+    .pro-desc {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        font-style: italic;
+        font-weight: 400;
+        text-transform: uppercase
+    }
+
+    .prod-description {
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .marca {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700
+    }
+
+    .preco-box {
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: auto;
+        background-color: #feeb2d;
+        width: max-content
+    }
+
+    .sp-30 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 30%;
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
+        text-decoration: none
+    }
+
+    .sp-30._01b {
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+
+    .sp-30._02b {
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+
+    .sp-30._03b {
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann {
+        background-position: 80% 50%;
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    .vr-box {
+        overflow: hidden;
+    }
+
+    .vr-box iframe {
+        width: 80%;
+        height: 720px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width:1200px) {
+        .vr-box iframe {
+            width: 100%;
+        }
+
+        .sportpage-fullbann.b {
+            background-position: 50% 50%;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .sportpage-fullbann.a {
+            background-position: 50% 50%;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+
+        .vr-box {
+            overflow: hidden;
+        }
+
+        .vr-box iframe {
+            width: 80%;
+            height: 720px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width:1200px) {
+            .vr-box iframe {
+                width: 100%;
+            }
+
+            .sportpage-columns {
+                height: auto;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+
+            .sp-50 {
+                width: 100%;
+                height: 280px;
+                margin-top: 10px
+            }
+
+            .prod-titulo.full {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: auto 0 -20px 0
+            }
+
+            .sp-30 {
+                width: 100%;
+                height: 280px;
+                margin-top: 10px
+            }
+</style>
+
+<div class="sportpage-dkt">
+    <style>
+        @media only screen and (min-width: 400px) {
+            .cta-margin-sales {
+                margin-left: 50px;
+            }
+        }
+    </style>
+    <div class="banner-sales" style="
+      z-index: 0;
+      background: rgb(218, 7, 39);
+      bottom: 3px;
+      border: 0px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+    ">
+        <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+            <p style="
+          color: #fff;
+          font-size: 18px;
+          font-weight: bold;
+          font-stretch: condensed;
+          font-style: italic;
+          padding: 18px 5px;
+          text-transform: uppercase;
+          margin: 0;
+          position: relative;
+          text-align: center;
+          width: 100%;
+        ">
+                OPORTUNIDADES CICLISMO
+                <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">"
+                    style="font-style: normal"><a type="submit"
+                        href="https://www.decathlon.pt/deals-page/oportunidades/onsale-1/_/N-3h6htZ831l7z?showMoreIds=3174806751"
+                        target="_blank">DESCOBRE MAIS</a></span>
+            </p>
+        </div>
+    </div>
+
+    <!--area de 3 colunas-->
+
+    <div class="sportpage-columns">
+        <style>
+            .sp-30._01b {
+                background-image: url("https://contents.mediadecathlon.com/p2085444/k$6d7c60c0762dcd85e28fb5b443c93ba9/924x924/RIVERSIDE%20ORIGINAL%20920E.webp");
+            }
+        </style>
+        <a href="https://www.decathlon.pt/p/bicicleta-eletrica-de-trekking-passeio-original-920-e/_/R-p-325430?mc=8586865"
+            class="sp-30 _01b w-inline-block" target="_blank">
+            
+            <div class="plus-preco"><div class="antes-preco riscado"><span class="slashed">1099€</span><span class="text-span-5"><br> -9%</span></div>
+            <div class="preco-prod off"><div class="preco off">999€</div></div></div>
+
+            <div class="prod-titulo _3line">
+                <div class="prod-description">
+                    <div class="marca">RIVERSIDE ORIGINAL 920E</div>
+                    <h1 class="pro-desc">
+                        FACILITE OS SEUS PASSEIOS EM ESTRADAS E CAMINHOS
+                    </h1>
+                </div>
+                <div class="cta-embed w-embed">
+                    <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                </div>
+            </div>
+        </a>
+
+        <style>
+            .sp-30._02b {
+                background-image: url("https://contents.mediadecathlon.com/p1620066/k$c9bdc0e8ceb9d35cba8253b4997ef1ae/924x616/ROCKRIDER_CASQUE_XC_FLUO_JAUNE%5B8546748%5DTCI_PSHOT.webp");
+            }
+        </style>
+        <a href="https://www.decathlon.pt/p/capacete-btt-xc/_/R-p-191391?mc=8546748&c=AMARELO"
+            class="sp-30 _02b w-inline-block" target="_blank">
+            
+            <div class="plus-preco"><div class="antes-preco riscado"><span class="slashed">45€</span><span class="text-span-5"><br> -11%</span></div>
+            <div class="preco-prod off"><div class="preco off">40€</div></div></div>
+
+            <div class="prod-titulo _3line">
+                <div class="prod-description">
+                    <div class="marca">CAPACETE BTT XC</div>
+                    <h1 class="pro-desc">LEVEZA APENAS 248g NO TAMANHO M</h1>
+                    <div class="cta-embed w-embed">
+                        <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <style>
+            .sp-30._03b {
+                background-image: url("https://contents.mediadecathlon.com/p2141603/k$215c640394d03dda1d907dbe3e042b8b/924x616/DECATHLON%20BOITE%20A%20OUTILS%20VELO%20900.webp");
+            }
+        </style>
+        <a href="https://www.decathlon.pt/p/caixa-de-ferramentas-para-bicicleta-900/_/R-p-100427?mc=8381080"
+            class="sp-30 _03b w-inline-block" target="_blank">
+            
+            <div class="plus-preco"><div class="antes-preco riscado"><span class="slashed">70€</span><span class="text-span-5"><br> -21%</span></div>
+            <div class="preco-prod off"><div class="preco off">55€</div></div></div>
+
+            <div class="prod-titulo _3line">
+                <div class="prod-description">
+                    <div class="marca">CAIXA DE FERRAMENTAS 900</div>
+                    <h1 class="pro-desc">
+                        CAIXA DE FERRAMENTAS PARA TODO O TIPO DE REPARAÇÕES
+                    </h1>
+                </div>
+                <div class="cta-embed w-embed">
+                    <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <style>
+        /* BACKGROUND DESKTOP */
+        .sportpage-fullbann {
+            background-image: url("https://contents.mediadecathlon.com/s926615/k$f9db75134e1360d8efa7acf56408b736/1512x345_banner%20sp.webp");
+        }
+
+        /* BACKGROUND MOBILE */
+        @media screen and (max-width: 900px) {
+            .sportpage-fullbann {
+                background-image: url("https://contents.mediadecathlon.com/p2252446/k$69261a511c8e461db008f756edfbd727/900x1350/ROCKRIDER%20VTT%20EXPLORE%20540%20BLEU%20NOIR%2029%22.png");
+            }
+        }
+    </style>
+    <!--Preço imagens e links - se não tiver preço comentar
+conselhos -> produtos blocos de oferta -> video
+href com # e titulos de produto ou preço Lorem Ipsum-->
+
+    <a href="https://www.decathlon.pt/novidades/_/N-3h6htZ1szrx1f" target="_blank">
+        <div class="sportpage-fullbann c">
+            <div class="prod-titulo full">
+                <div class="prod-description">
+                    <div class="marca">NOVIDADES CICLISMO</div>
+                    <h1 class="pro-desc">
+                        DESCUBRA TUDO QUE HÁ DE NOVO NO MUNDO DO CICLISMO DECATHLON
+                    </h1>
+                    <div class="preco-box w-embed">
+                        <!-- <div class="dkt-price__cartridge">3,90€</div> -->
+                    </div>
+                </div>
+                <div class="cta-embed w-embed">
+                    <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- FIM SPORTPAGE -->
+</div>
