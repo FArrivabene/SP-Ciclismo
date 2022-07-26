@@ -219,7 +219,6 @@
   }
 </style>
 <style>
-  /*CÓDIGO PARA RETIRAR A SIDEBAR AZUL*/
   /* fix sidebar */
   .sportspage__introfloor .sportspage__nav-item {
     display: none;
@@ -272,7 +271,6 @@
     padding-bottom: 40px;
     max-width: 1520px;
     margin: auto;
-    height: 345px;
   }
 
   #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.a>div>div.prod-description>div.preco-box.w-embed {
@@ -475,15 +473,9 @@
     margin: 0 auto;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1600px) {
     .vr-box iframe {
       width: 100%;
-    }
-
-    .sportpage-fullbann.b {
-      background-position: 50% 50%;
-      background-size: cover;
-      background-repeat: no-repeat;
     }
 
     .sportpage-fullbann.a {
@@ -492,7 +484,19 @@
       background-repeat: no-repeat;
     }
 
+    .sportpage-fullbann.b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
     .sportpage-fullbann.c {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .sportpage-fullbann.d {
       background-position: 50% 50%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -511,6 +515,10 @@
   }
 
   @media screen and (max-width: 1200px) {
+    .vr-box iframe {
+      width: 100%;
+    }
+
     .sportpage-columns {
       height: auto;
       -webkit-box-orient: vertical;
@@ -539,60 +547,173 @@
       margin-top: 10px;
     }
   }
-
-  .sportpage-fullbann {
-    height: 440px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  @font-face {
-    font-family: "Onetypo sports signes v";
-    src: url(/static/fonts/ONETYPO-SPORTS-SIGNES-V.0.otf) format("opentype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
 </style>
 
-<!--START CODE-->
 <div class="sportpage-dkt">
-  <div>
-    <!-- ZONA QUE PODE SER DESATIVADA (BANNER) -->
-    <style>
-      /* BACKGROUND DESKTOP */
-      /* LINK DO BANNER EM .webp 1512x345 */
+  <style>
+    /* BACKGROUND DESKTOP */
+    /* LINK DO BANNER EM .webp 1512x345 */
+    .sportpage-fullbann.c {
+      background-image: url("https://contents.mediadecathlon.com/s943617/k$2b59848885af46c64b75ee9c032d22ce/banner-sportpage_1512x345_bike-lovers_passeio_generalista.webp");
+      height: 345px;
+      border-radius: 5px;
+      box-shadow: 0 5px 5px 0 #e2e2e2;
+    }
+
+    /* BACKGROUND MOBILE */
+    /* LINK DO BANNER EM .webp 600x720 */
+    @media screen and (max-width: 900px) {
       .sportpage-fullbann.c {
-        background-image: url("https://contents.mediadecathlon.com/s926615/k$f9db75134e1360d8efa7acf56408b736/1512x345_banner%20sp.webp");
-        height: 345px;
+        background-image: url("https://contents.mediadecathlon.com/s943616/k$65920becf958d141f3abfb4c0d9c14db/banner-sportpage_mobile_600x720_bike-lovers_passeio_generalista.webp");
         border-radius: 5px;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
       }
+    }
+  </style>
 
-      /* BACKGROUND MOBILE */
-      /* LINK DO BANNER EM .webp 600x720 */
-      @media screen and (max-width: 900px) {
-        .sportpage-fullbann.c {
-          background-image: url("https://contents.mediadecathlon.com/p2252446/k$69261a511c8e461db008f756edfbd727/900x1350/ROCKRIDER%20VTT%20EXPLORE%20540%20BLEU%20NOIR%2029%22.png");
-          border-radius: 5px;
-        }
-      }
-    </style>
+  <!--Preço imagens e links - se não tiver preço comentar
+conselhos -> produtos blocos de oferta -> video
+href com # e titulos de produto ou preço Lorem Ipsum-->
 
-    <!--Preço imagens e links - se não tiver preço comentar
-  conselhos -> produtos blocos de oferta -> video
-  href com # e titulos de produto ou preço Lorem Ipsum-->
+  <!-- COLOCAR AQUI LINK DE DESTINO -->
+  <a href="https://eventos.decathlon.pt/" target="_blank">
+    <div class="sportpage-fullbann c"></div>
+  </a>
+</div>
 
-    <!-- COLOCAR AQUI LINK DE DESTINO -->
-    <a href="https://eventos.decathlon.pt/eventos/ciclismo-btt" target="_blank">
-      <div class="sportpage-fullbann c">
-        <div class="prod-titulo full"></div>
-      </div>
-    </a>
+<style>
+  @media only screen and (min-width: 400px) {
+    .cta-margin-sales {
+      margin-left: 50px;
+    }
+  }
+</style>
+<div class="banner-sales" style="
+    z-index: 0;
+    background: rgb(218, 7, 39);
+    bottom: 3px;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+  ">
+  <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+    <p style="
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: condensed;
+        font-style: italic;
+        padding: 18px 5px;
+        text-transform: uppercase;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      ">
+      OPORTUNIDADES CICLISMO
+      <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+          type="submit"
+          href="https://www.decathlon.pt/deals-page/oportunidades/onsale-1/_/N-3h6htZ831l7z?opeco=opeco:sp-ciclismo-baropt"
+          target="_blank">DESCOBRE MAIS</a></span>
+    </p>
   </div>
+</div>
 
+<!--area de 3 colunas-->
+
+<div class="sportpage-columns">
+  <style>
+    .sp-30._01b {
+      background-image: url("https://contents.mediadecathlon.com/p2054250/k$1a3a7bd017d2e7f468d92b63d07301b8/924x924/BTWIN%20RUNRIDE%20900%20BLEU.webp");
+    }
+  </style>
+  <a href="https://www.decathlon.pt/p/bicicleta-de-aprendizagem-crianca-12-polegadas-runride-900/_/R-p-323485?opeco=opeco:sp-ciclismo-banner1"
+    class="sp-30 _01b w-inline-block" target="_blank">
+    <div class="plus-preco">
+      <div class="antes-preco riscado">
+        <span class="slashed"> 89€ </span>
+        <span class="text-span-5"><br />
+          -14%
+        </span>
+      </div>
+      <div class="preco-prod off">
+        <div class="preco off">76€</div>
+      </div>
+    </div>
+
+    <div class="prod-titulo _3line">
+      <div class="prod-description">
+        <div class="marca">BICICLETA RUNRIDE 900</div>
+        <h1 class="pro-desc">BICICLETA DE APRENDIZAGEM COM PNEUS 12"</h1>
+      </div>
+      <div class="cta-embed w-embed">
+        <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+      </div>
+    </div>
+  </a>
+
+  <style>
+    .sp-30._02b {
+      background-image: url("https://contents.mediadecathlon.com/p2089446/k$51edd08c512085b47f229e8b055ff685/924x924/BTWIN%20RIVERSIDE%20500%209-12%20NORME%20EUROPE.webp");
+    }
+  </style>
+  <a href="https://www.decathlon.pt/p/bicicleta-de-trekking-crianca-riverside-500-24-polegadas-9-12-anos/_/R-p-313177?opeco=opeco:sp-ciclismo-banner2"
+    class="sp-30 _02b w-inline-block" target="_blank">
+    <div class="plus-preco">
+      <div class="antes-preco riscado">
+        <span class="slashed"> 199€ </span>
+        <span class="text-span-5"><br />
+          -7%
+        </span>
+      </div>
+      <div class="preco-prod off">
+        <div class="preco off">185€</div>
+      </div>
+    </div>
+
+    <div class="prod-titulo _3line">
+      <div class="prod-description">
+        <div class="marca">BICICLETA DE TREKKING 24"</div>
+        <h1 class="pro-desc">Bicicleta de trekking dos 9 aos 12 anos</h1>
+        <div class="cta-embed w-embed">
+          <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <style>
+    .sp-30._03b {
+      background-image: url("https://contents.mediadecathlon.com/p2141603/k$215c640394d03dda1d907dbe3e042b8b/924x616/DECATHLON%20BOITE%20A%20OUTILS%20VELO%20900.webp");
+    }
+  </style>
+  <a href="https://www.decathlon.pt/p/caixa-de-ferramentas-para-bicicleta-900/_/R-p-100427?opeco=opeco:sp-ciclismo-banner3"
+    class="sp-30 _03b w-inline-block" target="_blank">
+    <div class="plus-preco">
+      <div class="antes-preco riscado">
+        <span class="slashed"> 70€ </span>
+        <span class="text-span-5"><br />
+          -21%
+        </span>
+      </div>
+      <div class="preco-prod off">
+        <div class="preco off">55€</div>
+      </div>
+    </div>
+
+    <div class="prod-titulo _3line">
+      <div class="prod-description">
+        <div class="marca">CAIXA DE FERRAMENTAS 900</div>
+        <h1 class="pro-desc">FERRAMENTAS PARA TODO O TIPO DE REPARAÇÕES</h1>
+      </div>
+      <div class="cta-embed w-embed">
+        <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="sportpage-dkt">
   <style>
     @media only screen and (min-width: 400px) {
       .cta-margin-sales {
@@ -602,13 +723,13 @@
   </style>
   <div class="banner-sales" style="
       z-index: 0;
-      background: rgb(218, 7, 39);
+      background: #8126a2;
       bottom: 3px;
       border: 0px solid rgb(0, 0, 0);
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
     ">
-    <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex; margin-top: 1em">
+    <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
       <p style="
           color: #fff;
           font-size: 18px;
@@ -622,49 +743,33 @@
           text-align: center;
           width: 100%;
         ">
-        OPORTUNIDADES CICLISMO
-        <!--LINK COM UTM BARRA DE OPORTUNIDADE-->
+        NOVIDADES 2022
         <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
-            type="submit"
-            href="https://www.decathlon.pt/deals-page/oportunidades/onsale-1/_/N-3h6htZ831l7z?opeco=opeco:sp-ciclismo-baropt"
+            type="submit" href="https://www.decathlon.pt/novidades/_/N-3h6htZ1szrx1f?opeco=opeco:sp-ciclismo-barnovi"
             target="_blank">DESCOBRE MAIS</a></span>
       </p>
     </div>
   </div>
 
   <!--area de 3 colunas-->
-  <!--AQUI É COLOCADO 3 DESTAQUES EM PROMOÇÃO-->
-  <!--COLOCAR UTM EM CADA LINK-->
 
   <div class="sportpage-columns">
     <style>
-      .sp-30._01b {
-        background-image: url("https://contents.mediadecathlon.com/p2054250/k$1a3a7bd017d2e7f468d92b63d07301b8/924x924/BTWIN%20RUNRIDE%20900%20BLEU.webp");
+      .sp-30._04b {
+        background-image: url("https://contents.mediadecathlon.com/p2283166/k$1a577847adc888f3468eb94964299cb5/924x616/VESTTA%20MAILLOT%20VTT%20RACE%20REPLICA%20TEAM.webp");
       }
     </style>
-    <a href="https://www.decathlon.pt/p/bicicleta-de-aprendizagem-crianca-12-polegadas-runride-900/_/R-p-323485?opeco=opeco:sp-ciclismo-banner1"
-      class="sp-30 _01b w-inline-block" target="_blank">
-      <div class="plus-preco">
-        <div class="antes-preco riscado">
-          <!--COLOCAR PREÇO ANTIGO-->
-          <span class="slashed"> 89€ </span>
-          <!--PORCENTAGEM DE DESCONTO-->
-          <span class="text-span-5"><br />
-            -14%
-          </span>
-        </div>
-        <div class="preco-prod off">
-          <!--NOVO PREÇO COM DESCONTO-->
-          <div class="preco off">76€</div>
+    <a href="https://www.decathlon.pt/p/camisola-de-btt-homem-replica-team/_/R-p-X8790869?opeco=opeco:ciclismo-banner4"
+      class="sp-30 _04b w-inline-block" target="_blank">
+      <div class="preco-box w-embed">
+        <div class="dkt-price__cartridge" style="color: black; background-color: #ffea28">
+          65€
         </div>
       </div>
-
       <div class="prod-titulo _3line">
         <div class="prod-description">
-          <!--DESCRIÇÃO DO PRODUTO-->
-          <div class="marca">BICICLETA RUNRIDE 900</div>
-          <!--FRASE DE DESTAQUE-->
-          <h1 class="pro-desc">BICICLETA DE APRENDIZAGEM COM PNEUS 12"</h1>
+          <div class="marca">ROCKRIDER RACE TEAM</div>
+          <h1 class="pro-desc">Réplica da equipa UCI Rockrider Racing Team</h1>
         </div>
         <div class="cta-embed w-embed">
           <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
@@ -673,33 +778,21 @@
     </a>
 
     <style>
-      .sp-30._02b {
-        background-image: url("https://contents.mediadecathlon.com/p2089446/k$51edd08c512085b47f229e8b055ff685/924x924/BTWIN%20RIVERSIDE%20500%209-12%20NORME%20EUROPE.webp");
+      .sp-30._05b {
+        background-image: url("https://contents.mediadecathlon.com/p2168110/k$40c873927f30812cfceef1c1080c5c57/924x924/ROCKRIDER%20VTT%20EXPLORE%20540%20PRUNE%20NOIRE%20FEMME%2029''.webp");
       }
     </style>
-    <a href="https://www.decathlon.pt/p/bicicleta-de-trekking-crianca-riverside-500-24-polegadas-9-12-anos/_/R-p-313177?opeco=opeco:sp-ciclismo-banner2"
-      class="sp-30 _02b w-inline-block" target="_blank">
-      <div class="plus-preco">
-        <div class="antes-preco riscado">
-          <!--COLOCAR PREÇO ANTIGO-->
-          <span class="slashed"> 199€ </span>
-          <!--PORCENTAGEM DE DESCONTO-->
-          <span class="text-span-5"><br />
-            -7%
-          </span>
-        </div>
-        <div class="preco-prod off">
-          <!--NOVO PREÇO COM DESCONTO-->
-          <div class="preco off">185€</div>
+    <a href="https://www.decathlon.pt/p/bicicleta-btt-expl-540-29-mulher-ameixa-preto/_/R-p-325317?opeco=opeco:ciclismo-banner5"
+      class="sp-30 _05b w-inline-block" target="_blank">
+      <div class="preco-box w-embed">
+        <div class="dkt-price__cartridge" style="color: black; background-color: #ffea28">
+          760€
         </div>
       </div>
-
       <div class="prod-titulo _3line">
         <div class="prod-description">
-          <!--DESCRIÇÃO DO PRODUTO-->
-          <div class="marca">BICICLETA DE TREKKING 24"</div>
-          <!--FRASE DE DESTAQUE-->
-          <h1 class="pro-desc">Bicicleta de trekking dos 9 aos 12 anos</h1>
+          <div class="marca">BTT EXPLORER 540</div>
+          <h1 class="pro-desc">Conforto e reatividade com as rodas 29"</h1>
           <div class="cta-embed w-embed">
             <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
           </div>
@@ -708,172 +801,28 @@
     </a>
 
     <style>
-      .sp-30._03b {
-        background-image: url("https://contents.mediadecathlon.com/p2141603/k$215c640394d03dda1d907dbe3e042b8b/924x616/DECATHLON%20BOITE%20A%20OUTILS%20VELO%20900.webp");
+      .sp-30._06b {
+        background-image: url("https://contents.mediadecathlon.com/p2265155/k$2305a30ccee102c035a3fb1697c6f7c8/924x924/ROCKRIDER%20VTT%20E-ST%20500%20V3%20PE22.webp");
       }
     </style>
-    <a href="https://www.decathlon.pt/p/caixa-de-ferramentas-para-bicicleta-900/_/R-p-100427?opeco=opeco:sp-ciclismo-banner3"
-      class="sp-30 _03b w-inline-block" target="_blank">
-      <div class="plus-preco">
-        <div class="antes-preco riscado">
-          <!--COLOCAR PREÇO ANTIGO-->
-          <span class="slashed"> 70€ </span>
-          <!--PORCENTAGEM DE DESCONTO-->
-          <span class="text-span-5"><br />
-            -21%
-          </span>
-        </div>
-        <div class="preco-prod off">
-          <!--NOVO PREÇO COM DESCONTO-->
-          <div class="preco off">55€</div>
+    <a href="https://www.decathlon.pt/p/btt-eletrica-e-st-500-27-5-motor-central-preto/_/R-p-324286?opeco=opeco:sp-ciclismo-banner6"
+      class="sp-30 _06b w-inline-block" target="_blank">
+      <div class="preco-box w-embed">
+        <div class="dkt-price__cartridge" style="color: black; background-color: #ffea28">
+          1700€
         </div>
       </div>
-
       <div class="prod-titulo _3line">
         <div class="prod-description">
-          <!--DESCRIÇÃO DO PRODUTO-->
-          <div class="marca">CAIXA DE FERRAMENTAS 900</div>
-          <!--FRASE DE DESTAQUE-->
-          <h1 class="pro-desc">FERRAMENTAS PARA TODO O TIPO DE REPARAÇÕES</h1>
+          <div class="marca">BTT ELÉTRICA E-ST 500</div>
+          <h1 class="pro-desc">CONCEBIDA PARA OS PASSEIOS TODO TERRENO</h1>
         </div>
         <div class="cta-embed w-embed">
           <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
         </div>
       </div>
     </a>
-  </div>
 
-  <div class="sportpage-dkt">
-    <style>
-      @media only screen and (min-width: 400px) {
-        .cta-margin-sales {
-          margin-left: 50px;
-        }
-      }
-    </style>
-    <div class="banner-sales" style="
-        z-index: 0;
-        background: #8126a2;
-        bottom: 3px;
-        border: 0px solid rgb(0, 0, 0);
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
-      ">
-      <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
-        <p style="
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            font-stretch: condensed;
-            font-style: italic;
-            padding: 18px 5px;
-            text-transform: uppercase;
-            margin: 0;
-            position: relative;
-            text-align: center;
-            width: 100%;
-          ">
-          NOVIDADES 2022
-          <!-- COLOCAR AQUI LINK DE DESTINO -->
-          <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
-              type="submit" href="https://www.decathlon.pt/novidades/_/N-3h6htZ1szrx1f?opeco=opeco:sp-ciclismo-barnovi"
-              target="_blank">DESCOBRE MAIS</a></span>
-        </p>
-      </div>
-    </div>
-
-    <!--area de 3 colunas-->~
-    <!--ZONA COM 3 DESTAQUES DE OPORTUNIDADES-->
-
-    <div class="sportpage-columns">
-      <!--img DO PIXL EM .webp PODE SER 924x924-->
-      <style>
-        .sp-30._04b {
-          background-image: url("https://contents.mediadecathlon.com/p2283166/k$1a577847adc888f3468eb94964299cb5/924x616/VESTTA%20MAILLOT%20VTT%20RACE%20REPLICA%20TEAM.webp");
-        }
-      </style>
-      <!--LINK DO ARTIGO COM UTM-->
-      <a href="https://www.decathlon.pt/p/camisola-de-btt-homem-replica-team/_/R-p-X8790869?opeco=opeco:ciclismo-banner4"
-        class="sp-30 _04b w-inline-block" target="_blank">
-        <div class="preco-box w-embed">
-          <!--PREÇO DO PRODUTO-->
-          <div class="dkt-price__cartridge" style="color: black; background-color: #ffea28">
-            65€
-          </div>
-        </div>
-        <div class="prod-titulo _3line">
-          <div class="prod-description">
-            <!--DESCRIÇÃO DO PRODUTO-->
-            <div class="marca">ROCKRIDER RACE TEAM</div>
-            <!--FRASE DE DESTAQUE-->
-            <h1 class="pro-desc">
-              Réplica da equipa UCI Rockrider Racing Team
-            </h1>
-          </div>
-          <div class="cta-embed w-embed">
-            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
-          </div>
-        </div>
-      </a>
-
-      <!--img DO PIXL EM .webp PODE SER 924x924-->
-      <style>
-        .sp-30._05b {
-          background-image: url("https://contents.mediadecathlon.com/p2168110/k$40c873927f30812cfceef1c1080c5c57/924x924/ROCKRIDER%20VTT%20EXPLORE%20540%20PRUNE%20NOIRE%20FEMME%2029''.webp");
-        }
-      </style>
-      <!--LINK DO ARTIGO COM UTM-->
-      <a href="https://www.decathlon.pt/p/bicicleta-btt-expl-540-29-mulher-ameixa-preto/_/R-p-325317?opeco=opeco:ciclismo-banner5"
-        class="sp-30 _05b w-inline-block" target="_blank">
-        <div class="preco-box w-embed">
-          <!--PREÇO DO PRODUTO-->
-          <div class="dkt-price__cartridge" style="color: black; background-color: #ffea28">
-            760€
-          </div>
-        </div>
-        <div class="prod-titulo _3line">
-          <div class="prod-description">
-            <!--DESCRIÇÃO DO PRODUTO-->
-            <div class="marca">BTT EXPLORER 540</div>
-            <!--FRASE DE DESTAQUE-->
-            <h1 class="pro-desc">Conforto e reatividade com as rodas 29"</h1>
-            <div class="cta-embed w-embed">
-              <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <!--img DO PIXL EM .webp PODE SER 924x924-->
-      <style>
-        .sp-30._06b {
-          background-image: url("https://contents.mediadecathlon.com/p2265155/k$2305a30ccee102c035a3fb1697c6f7c8/924x924/ROCKRIDER%20VTT%20E-ST%20500%20V3%20PE22.webp");
-        }
-      </style>
-      <!--LINK DO ARTIGO COM UTM-->
-      <a href="https://www.decathlon.pt/p/btt-eletrica-e-st-500-27-5-motor-central-preto/_/R-p-324286?opeco=opeco:sp-ciclismo-banner6"
-        class="sp-30 _06b w-inline-block" target="_blank">
-        <div class="preco-box w-embed">
-          <!--PREÇO DO PRODUTO-->
-          <div class="dkt-price__cartridge" style="color: black; background-color: #ffea28">
-            1700€
-          </div>
-        </div>
-        <div class="prod-titulo _3line">
-          <div class="prod-description">
-            <!--DESCRIÇÃO DO PRODUTO-->
-            <div class="marca">BTT ELÉTRICA E-ST 500</div>
-            <!--FRASE DE DESTAQUE-->
-            <h1 class="pro-desc">CONCEBIDA PARA OS PASSEIOS TODO TERRENO</h1>
-          </div>
-          <div class="cta-embed w-embed">
-            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
-          </div>
-        </div>
-      </a>
-
-      <!-- FIM SPORTPAGE -->
-
-    </div>
+    <!-- FIM SPORTPAGE -->
   </div>
 </div>
