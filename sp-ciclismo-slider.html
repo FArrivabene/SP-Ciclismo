@@ -1,0 +1,1054 @@
+<style>
+  .plus-preco,
+  .preco {
+    background-color: transparent
+  }
+
+  .plus-preco,
+  .preco-prod {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal
+  }
+
+  .euro,
+  .preco {
+    font-family: 'Roboto Condensed', sans-serif
+  }
+
+  .preco {
+    color: #000;
+    font-size: 20px;
+    font-style: normal
+  }
+
+  .antes-preco,
+  .text-span-5 {
+    font-weight: 700
+  }
+
+  .preco.off {
+    -ms-transform: none;
+    transform: none;
+    color: #fff;
+    font-size: 23px
+  }
+
+  .plus-preco {
+    position: static;
+    left: auto;
+    top: -2%;
+    right: -2%;
+    bottom: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+    margin-right: 0;
+    padding: 0 10px;
+    float: right;
+    clear: none;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: transparent;
+    font-size: 22px
+  }
+
+  .preco-prod {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 26px;
+    margin-left: 5px;
+    padding: 3px 5px 3px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ffea2d;
+    color: #fff;
+    text-align: center
+  }
+
+  .preco-prod.off {
+    margin-left: -5px;
+    background-color: #e20c18;
+    background-image: linear-gradient(220deg, #f40000, #d90000);
+  }
+
+  .euro {
+    font-size: .6em
+  }
+
+  .antes-preco {
+    margin-right: 8px;
+    margin-left: auto;
+    color: #000;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: right;
+    background-color: #feeb2d;
+    padding: 3px;
+  }
+
+  .text-span-5 {
+    color: #e22418;
+    font-size: 15px;
+    line-height: 10px
+  }
+
+  .slashed {
+    font-weight: 700;
+    text-decoration: line-through
+  }
+
+  @media screen and (max-width:991px) {
+    .plus-preco {
+      margin-top: 5px;
+      margin-right: 4px;
+      padding: 4px
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .plus-preco {
+      margin-top: 4px;
+      margin-right: 4px;
+      padding: 4px
+    }
+  }
+
+  @media screen and (max-width:479px) {
+
+    .plus-preco,
+    .preco-prod {
+      -webkit-box-direction: normal
+    }
+
+    .preco {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 16px;
+      line-height: 11px;
+      font-weight: 700
+    }
+
+    .preco.off {
+      font-size: 15px
+    }
+
+    .plus-preco {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-left: 0;
+      padding: 2px 0;
+      -webkit-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center
+    }
+
+    .preco-prod {
+      height: auto;
+      margin-bottom: auto;
+      padding: 5px;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end
+    }
+
+    .preco-prod.off {
+      margin-left: 0;
+      padding: 6px 3px
+    }
+
+    .euro {
+      font-size: 14px
+    }
+
+    .antes-preco {
+      margin-right: 7px;
+      font-size: 8px
+    }
+
+    .antes-preco.riscado {
+      margin-right: 5px
+    }
+
+    .text-span-5 {
+      font-size: 12px;
+      line-height: 9px
+    }
+
+    .slashed {
+      font-size: 10px
+    }
+  }
+</style>
+<style>
+  /* fix sidebar */
+  .sportspage__introfloor .sportspage__nav-item {
+    display: none;
+  }
+
+  .sportspage .sportspage__navigation {
+    display: none;
+    visibility: hidden;
+    width: 0px;
+  }
+
+  .sportspage .sportspage__floor {
+    padding-left: 0px !important;
+  }
+
+  .sportspage .sportspage__freeHtmlfloor {
+    padding-left: 0px !important;
+  }
+
+  @media screen and (min-width: 801px) {
+    .sportspage__floors {
+      padding-left: 0px !important;
+    }
+
+    .sportspage__introfloor .card {
+      text-align: center;
+    }
+
+    .sportspage__introfloor h2 {
+      font-size: 36px;
+    }
+
+    .sportspage__introfloor p {
+      font-size: 17px;
+      margin-top: 20px;
+    }
+  }
+
+  /* end of fix sidebar */
+</style>
+
+<style>
+  .cta-embed {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto
+  }
+
+  .sportpage-dkt {
+    padding-bottom: 40px;
+    max-width: 1520px;
+    margin: auto;
+  }
+
+  #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.a>div>div.prod-description>div.preco-box.w-embed {
+    margin: 5px 0
+  }
+
+  #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.b>div>div.prod-description>div.preco-box.w-embed {
+    margin: 5px 0
+  }
+
+  .sportpage-columns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 380px;
+    padding-top: 40px;
+    padding-bottom: 40px
+  }
+
+  .sp-50 {
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 0 #e2e2e2;
+    text-decoration: none
+  }
+
+  .sp-50._01a {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll
+  }
+
+  .sp-50._02a {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .prod-titulo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    margin-top: auto;
+    padding: 10px;
+    background-color: rgb(0 0 0 / 50%)
+  }
+
+  .prod-titulo._3line {
+    display: block;
+    height: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center
+  }
+
+  .prod-titulo.full {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: 40px
+  }
+
+  .pro-desc {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase
+  }
+
+  .prod-description {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .marca {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700
+  }
+
+  .preco-box {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: #feeb2d;
+    width: max-content
+  }
+
+  .sp-30 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 0 #e2e2e2;
+    text-decoration: none
+  }
+
+  .sp-30._01b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._02b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._03b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._04b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._05b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._06b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sportpage-fullbann {
+    background-position: 80% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .vr-box {
+    overflow: hidden;
+  }
+
+  .vr-box iframe {
+    width: 80%;
+    height: 720px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width:1200px) {
+    .vr-box iframe {
+      width: 100%;
+    }
+
+    .sportpage-fullbann.a {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann.b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann.c {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann.d {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .vr-box {
+      overflow: hidden;
+    }
+
+    .vr-box iframe {
+      width: 80%;
+      height: 720px;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width:1200px) {
+    .vr-box iframe {
+      width: 100%;
+    }
+
+    .sportpage-columns {
+      height: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    .sp-50 {
+      width: 100%;
+      height: 280px;
+      margin-top: 10px
+    }
+
+    .prod-titulo.full {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: auto 0 -20px 0
+    }
+
+    .sp-30 {
+      width: 100%;
+      height: 280px;
+      margin-top: 10px
+    }
+  }
+</style>
+
+
+<div class="sportpage-dkt">
+  <style>
+    @media only screen and (min-width: 400px) {
+      .cta-margin-sales {
+        margin-left: 50px;
+      }
+    }
+  </style>
+  <div class="banner-sales" style="
+    z-index: 0;
+    background: rgb(218, 7, 39);
+    bottom: 3px;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+  ">
+    <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+      <p style="
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: condensed;
+        font-style: italic;
+        padding: 18px 5px;
+        text-transform: uppercase;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      ">
+        SALDOS CICLISMO
+        <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+            type="submit"
+            href="https://www.decathlon.pt/deals-page/oportunidades/onsale-1/_/N-3h6htZ831l7z?opeco=opeco:hp_categorias-destaque-4_saldos-ciclismo-2022-sp"
+            target="_blank">DESCOBRE MAIS</a></span>
+      </p>
+    </div>
+  </div>
+
+  <!--area de 3 colunas-->
+
+  <div class="sportpage-columns">
+    <style>
+      .sp-30._01b {
+        background-image: url("https://contents.mediadecathlon.com/p1765949/k$13a2c2997fd3a0c98842d408851ab409/924x924/VAN%20RYSEL%20NEO%20SS%20JERSEY%20FLY.webp");
+      }
+    </style>
+    <a href="https://www.decathlon.pt/p/camisola-de-verao-c-manga-curta-de-bicicleta-de-estrada-homem-neo-racer/_/R-p-307946?opeco=opeco:sp-ciclismo-saldos1"
+      class="sp-30 _01b w-inline-block" target="_blank">
+
+      <div class="plus-preco">
+        <div class="antes-preco riscado">
+          <span class="slashed">
+            30€
+          </span>
+          <span class="text-span-5"><br>
+            -60%
+          </span>
+        </div>
+        <div class="preco-prod off">
+          <div class="preco off">
+            12€
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-titulo _3line">
+        <div class="prod-description">
+          <div class="marca">CAMISOLA VANRYSEL NEO-RACER</div>
+          <h1 class="pro-desc">
+            Com apenas 117 g para um tamanho M
+          </h1>
+        </div>
+        <div class="cta-embed w-embed">
+          <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+        </div>
+      </div>
+    </a>
+
+    <style>
+      .sp-30._02b {
+        background-image: url("https://contents.mediadecathlon.com/p2211907/k$35e4d96bc395aeea021c848a9aa41881/924x779/2000pt1688/4000xcr3376/BELL%20CASQUE%20VTT%20BELL%20UKON%20MIPS%20SLATE%20ORANGE.webp");
+      }
+    </style>
+    <a href="https://www.decathlon.pt/p/capacete-btt-bell-ukon-mips/_/R-p-X8745050?opeco=opeco:sp-ciclismo-saldos2"
+      class="sp-30 _02b w-inline-block" target="_blank">
+
+      <div class="plus-preco">
+        <div class="antes-preco riscado">
+          <span class="slashed">
+            85€
+          </span>
+          <span class="text-span-5"><br>
+            -20%
+          </span>
+        </div>
+        <div class="preco-prod off">
+          <div class="preco off">
+            68€
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-titulo _3line">
+        <div class="prod-description">
+          <div class="marca">CAPACETE BELL UKON MIPS</div>
+          <h1 class="pro-desc">O UKON Mips proporciona uma proteção elevada</h1>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <style>
+      .sp-30._03b {
+        background-image: url("https://contents.mediadecathlon.com/p1278172/k$2b307310a3709506712b2737a126deec/924x924/riverside%20120.webp");
+      }
+    </style>
+    <a href="https://www.decathlon.pt/p/bicicleta-de-trekking-riverside-120/_/R-p-300806?opeco=opeco:sp-ciclismo-saldos3"
+      class="sp-30 _03b w-inline-block" target="_blank">
+
+      <div class="plus-preco">
+        <div class="antes-preco riscado">
+          <span class="slashed">
+            230€
+          </span>
+          <span class="text-span-5"><br>
+            -13%
+          </span>
+        </div>
+        <div class="preco-prod off">
+          <div class="preco off">
+            200€
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-titulo _3line">
+        <div class="prod-description">
+          <div class="marca">TREKKING RIVERSIDE 120</div>
+          <h1 class="pro-desc">
+            8 velocidades com transmissão monoprato.
+          </h1>
+        </div>
+        <div class="cta-embed w-embed">
+          <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="sportpage-dkt">
+  <style>
+    @media only screen and (min-width: 400px) {
+      .cta-margin-sales {
+        margin-left: 50px;
+      }
+    }
+  </style>
+  <div class="banner-sales" style="
+    z-index: 0;
+    background: #8126a2;
+    bottom: 3px;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+  ">
+    <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+      <p style="
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: condensed;
+        font-style: italic;
+        padding: 18px 5px;
+        text-transform: uppercase;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      ">
+        NOVIDADES 2022
+        <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+            type="submit" href="https://www.decathlon.pt/novidades/_/N-3h6htZ1szrx1f?opeco=opeco:sp-ciclismo-barnovi"
+            target="_blank">DESCOBRE MAIS</a></span>
+      </p>
+    </div>
+  </div>
+
+  <!--area de 3 colunas-->
+
+  <div class="sportpage-columns">
+    <style>
+      .sp-30._04b {
+        background-image: url("https://contents.mediadecathlon.com/p2283166/k$1a577847adc888f3468eb94964299cb5/924x616/VESTTA%20MAILLOT%20VTT%20RACE%20REPLICA%20TEAM.webp");
+      }
+    </style>
+    <a href="https://www.decathlon.pt/p/camisola-de-btt-homem-replica-team/_/R-p-X8790869?opeco=opeco:ciclismo-banner4"
+      class="sp-30 _04b w-inline-block" target="_blank">
+      <div class="preco-box w-embed">
+        <div class="dkt-price__cartridge" style="color:black; background-color: #ffea28">
+          65€
+        </div>
+      </div>
+      <div class="prod-titulo _3line">
+        <div class="prod-description">
+          <div class="marca">ROCKRIDER RACE TEAM</div>
+          <h1 class="pro-desc">
+            Réplica da equipa UCI Rockrider Racing Team
+          </h1>
+        </div>
+        <div class="cta-embed w-embed">
+          <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+        </div>
+      </div>
+    </a>
+
+    <style>
+      .sp-30._05b {
+        background-image: url("https://contents.mediadecathlon.com/p2168110/k$40c873927f30812cfceef1c1080c5c57/924x924/ROCKRIDER%20VTT%20EXPLORE%20540%20PRUNE%20NOIRE%20FEMME%2029''.webp");
+      }
+    </style>
+    <a href="https://www.decathlon.pt/p/bicicleta-btt-expl-540-29-mulher-ameixa-preto/_/R-p-325317?opeco=opeco:ciclismo-banner5"
+      class="sp-30 _05b w-inline-block" target="_blank">
+      <div class="preco-box w-embed">
+        <div class="dkt-price__cartridge" style="color:black; background-color: #ffea28">
+          760€
+        </div>
+      </div>
+      <div class="prod-titulo _3line">
+        <div class="prod-description">
+          <div class="marca">BTT EXPLORER 540</div>
+          <h1 class="pro-desc">
+            Conforto e reatividade com as rodas 29"</h1>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <style>
+      .sp-30._06b {
+        background-image: url("https://contents.mediadecathlon.com/p2265155/k$2305a30ccee102c035a3fb1697c6f7c8/924x924/ROCKRIDER%20VTT%20E-ST%20500%20V3%20PE22.webp");
+      }
+    </style>
+    <a href="https://www.decathlon.pt/p/btt-eletrica-e-st-500-27-5-motor-central-preto/_/R-p-324286?opeco=opeco:sp-ciclismo-banner6"
+      class="sp-30 _06b w-inline-block" target="_blank">
+      <div class="preco-box w-embed">
+        <div class="dkt-price__cartridge" style="color:black; background-color: #ffea28">
+          1700€
+        </div>
+      </div>
+      <div class="prod-titulo _3line">
+        <div class="prod-description">
+          <div class="marca">BTT ELÉTRICA E-ST 500</div>
+          <h1 class="pro-desc">
+            CONCEBIDA PARA OS PASSEIOS TODO TERRENO
+          </h1>
+        </div>
+        <div class="cta-embed w-embed">
+          <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="sportpage-dkt">
+
+    <style>
+      /* BACKGROUND DESKTOP */
+      /* LINK DO BANNER EM .webp 1512x345 */
+      .sportpage-fullbann.c {
+        background-image: url("https://contents.mediadecathlon.com/s943617/k$2b59848885af46c64b75ee9c032d22ce/banner-sportpage_1512x345_bike-lovers_passeio_generalista.webp");
+        height: 345px;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
+      }
+
+      /* BACKGROUND MOBILE */
+      /* LINK DO BANNER EM .webp 600x720 */
+      @media screen and (max-width: 900px) {
+        .sportpage-fullbann.c {
+          background-image: url("https://contents.mediadecathlon.com/s943616/k$65920becf958d141f3abfb4c0d9c14db/banner-sportpage_mobile_600x720_bike-lovers_passeio_generalista.webp");
+          border-radius: 5px;
+          box-shadow: 0 5px 5px 0 #e2e2e2;
+        }
+      }
+    </style>
+
+    <!--Preço imagens e links - se não tiver preço comentar
+conselhos -> produtos blocos de oferta -> video
+href com # e titulos de produto ou preço Lorem Ipsum-->
+
+    <!-- COLOCAR AQUI LINK DE DESTINO -->
+    <a href="https://eventos.decathlon.pt/" target="_blank">
+      <div class="sportpage-fullbann c">
+      </div>
+    </a>
+  </div>
+
+  <div>
+    <!-- AQUI ESTA O SLIDER -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img
+          src="https://contents.mediadecathlon.com/p2237886/k$4b7b90a4230e7d131369a436dc260e2d/RIVERSIDE%20SACOCHE%20AVANT%20ADDITIONNELLE%20BKP.webp"
+          style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img
+          src="https://contents.mediadecathlon.com/p2237874/k$d4c1ef7eb31ce61ecafafe2d1017ff77/RIVERSIDE%20SACOCHE%20AVANT%20ADDITIONNELLE%20BKP.webp"
+          style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <a href="https://www.youtube.com">
+          <img
+            src="https://contents.mediadecathlon.com/p2237901/k$9376bf11aeae245d62075d93fc1f6c73/RIVERSIDE%20SACOCHE%20AVANT%20ADDITIONNELLE%20BKP.webp"
+            style="width:100%"></a>
+        <div class="text">Caption Three</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <!-- AQUI ESTA O CSS -->
+    <style>
+      * {
+        box-sizing: border-box
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+    </style>
+
+    <!-- AQUI COMEÇA O JAVASCRIPT -->
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+
+    <!-- AUTOMÁTICO
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 6000); // Change image every 2 seconds
+      }
+
+    </script>
+-->
+
+  </div>
