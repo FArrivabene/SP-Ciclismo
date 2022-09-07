@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #edeef6;
+      font-family: "Roboto Condensed", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      font-family: "Roboto Condensed", sans-serif;
+      background-color: #ffea28;
+      color: #000;
+      font-weight: 700;
+      border: 0;
+      border-radius: 5px;
+      padding: 10px 25px;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-container {
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      pointer-events: none;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-container.show {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    .modal {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 30px 50px;
+      width: 600px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .modal h1 {
+      margin: 0;
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+
+    .modal p {
+      font-size: 14px;
+    }
+  </style>
+  <button id="open">
+    ADICIONAR AO CARRINHO
+  </button>
+
+  <div class="modal-container" id="modal_container">
+    <div class="modal">
+      <h1>OS ARTIGOS FORAM ADICIONADOS AO CARRINHO</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, quia ad esse nobis officiis officia ex
+        magni quisquam soluta, neque beatae doloremque at veritatis. Molestiae reiciendis est deleniti inventore
+        necessitatibus.
+      </p>
+      <button id="close">
+        FECHAR
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const open = document.getElementById("open");
+    const modal_container = document.getElementById("modal_container");
+    const close = document.getElementById("close");
+
+    open.addEventListener("click", () => {
+      modal_container.classList.add("show");
+    });
+
+    close.addEventListener("click", () => {
+      modal_container.classList.remove("show");
+    });
+
+  </script>
+
+</body>
+
+</html>
