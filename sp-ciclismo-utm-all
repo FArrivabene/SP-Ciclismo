@@ -1,0 +1,1169 @@
+<style>
+  .plus-preco,
+  .preco {
+    background-color: transparent
+  }
+
+  .plus-preco,
+  .preco-prod {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal
+  }
+
+  .euro,
+  .preco {
+    font-family: 'Roboto Condensed', sans-serif
+  }
+
+  .preco {
+    color: #000;
+    font-size: 20px;
+    font-style: normal
+  }
+
+  .antes-preco,
+  .text-span-5 {
+    font-weight: 700
+  }
+
+  .preco.off {
+    -ms-transform: none;
+    transform: none;
+    color: #fff;
+    font-size: 23px
+  }
+
+  .plus-preco {
+    position: static;
+    left: auto;
+    top: -2%;
+    right: -2%;
+    bottom: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+    margin-right: 0;
+    padding: 0 10px;
+    float: right;
+    clear: none;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: transparent;
+    font-size: 22px
+  }
+
+  .preco-prod {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 26px;
+    margin-left: 5px;
+    padding: 3px 5px 3px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ffea2d;
+    color: #fff;
+    text-align: center
+  }
+
+  .preco-prod.off {
+    margin-left: -5px;
+    background-color: #e20c18;
+    background-image: linear-gradient(220deg, #f40000, #d90000);
+  }
+
+  .euro {
+    font-size: .6em
+  }
+
+  .antes-preco {
+    margin-right: 8px;
+    margin-left: auto;
+    color: #000;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: right;
+    background-color: #feeb2d;
+    padding: 3px;
+  }
+
+  .text-span-5 {
+    color: #e22418;
+    font-size: 15px;
+    line-height: 10px
+  }
+
+  .slashed {
+    font-weight: 700;
+    text-decoration: line-through
+  }
+
+  @media screen and (max-width:991px) {
+    .plus-preco {
+      margin-top: 5px;
+      margin-right: 4px;
+      padding: 4px
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .plus-preco {
+      margin-top: 4px;
+      margin-right: 4px;
+      padding: 4px
+    }
+  }
+
+  @media screen and (max-width:479px) {
+
+    .plus-preco,
+    .preco-prod {
+      -webkit-box-direction: normal
+    }
+
+    .preco {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 16px;
+      line-height: 11px;
+      font-weight: 700
+    }
+
+    .preco.off {
+      font-size: 15px
+    }
+
+    .plus-preco {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-left: 0;
+      padding: 2px 0;
+      -webkit-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center
+    }
+
+    .preco-prod {
+      height: auto;
+      margin-bottom: auto;
+      padding: 5px;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end
+    }
+
+    .preco-prod.off {
+      margin-left: 0;
+      padding: 6px 3px
+    }
+
+    .euro {
+      font-size: 14px
+    }
+
+    .antes-preco {
+      margin-right: 7px;
+      font-size: 8px
+    }
+
+    .antes-preco.riscado {
+      margin-right: 5px
+    }
+
+    .text-span-5 {
+      font-size: 12px;
+      line-height: 9px
+    }
+
+    .slashed {
+      font-size: 10px
+    }
+  }
+</style>
+<style>
+  /* fix sidebar */
+  .sportspage__introfloor .sportspage__nav-item {
+    display: none;
+  }
+
+  .sportspage .sportspage__navigation {
+    display: none;
+    visibility: hidden;
+    width: 0px;
+  }
+
+  .sportspage .sportspage__floor {
+    padding-left: 0px !important;
+  }
+
+  .sportspage .sportspage__freeHtmlfloor {
+    padding-left: 0px !important;
+  }
+
+  @media screen and (min-width: 801px) {
+    .sportspage__floors {
+      padding-left: 0px !important;
+    }
+
+    .sportspage__introfloor .card {
+      text-align: center;
+    }
+
+    .sportspage__introfloor h2 {
+      font-size: 36px;
+    }
+
+    .sportspage__introfloor p {
+      font-size: 17px;
+      margin-top: 20px;
+    }
+  }
+
+  /* end of fix sidebar */
+</style>
+
+<style>
+  .cta-embed {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto
+  }
+
+  .sportpage-dkt {
+    padding-bottom: 40px;
+    max-width: 1520px;
+    margin: auto;
+  }
+
+  #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.a>div>div.prod-description>div.preco-box.w-embed {
+    margin: 5px 0
+  }
+
+  #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.b>div>div.prod-description>div.preco-box.w-embed {
+    margin: 5px 0
+  }
+
+  .sportpage-columns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 380px;
+    padding-top: 40px;
+    padding-bottom: 40px
+  }
+
+  .sp-50 {
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 0 #e2e2e2;
+    text-decoration: none
+  }
+
+  .sp-50._01a {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll
+  }
+
+  .sp-50._02a {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .prod-titulo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    margin-top: auto;
+    padding: 10px;
+    background-color: rgb(0 0 0 / 50%)
+  }
+
+  .prod-titulo._3line {
+    display: block;
+    height: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center
+  }
+
+  .prod-titulo.full {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: 40px
+  }
+
+  .pro-desc {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase
+  }
+
+  .prod-description {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .marca {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700
+  }
+
+  .preco-box {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: #feeb2d;
+    width: max-content
+  }
+
+  .sp-30 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 0 #e2e2e2;
+    text-decoration: none
+  }
+
+  .sp-30._01b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._02b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._03b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._04b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._05b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sp-30._06b {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .sportpage-fullbann {
+    background-position: 80% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .vr-box {
+    overflow: hidden;
+  }
+
+  .vr-box iframe {
+    width: 80%;
+    height: 720px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width:1200px) {
+    .vr-box iframe {
+      width: 100%;
+    }
+
+    .sportpage-fullbann.a {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann.b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann.c {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+
+    .sportpage-fullbann.d {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .vr-box {
+      overflow: hidden;
+    }
+
+    .vr-box iframe {
+      width: 80%;
+      height: 720px;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width:1200px) {
+    .vr-box iframe {
+      width: 100%;
+    }
+
+    .sportpage-columns {
+      height: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    .sp-50 {
+      width: 100%;
+      height: 280px;
+      margin-top: 10px
+    }
+
+    .prod-titulo.full {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: auto 0 -20px 0
+    }
+
+    .sp-30 {
+      width: 100%;
+      height: 280px;
+      margin-top: 10px
+    }
+  }
+</style>
+
+<!-- Aqui esta a barra OPORTUNIDADES / SALDOS -->
+<div class="sportpage-dkt">
+  <style>
+    @media only screen and (min-width: 400px) {
+      .cta-margin-sales {
+        margin-left: 50px;
+      }
+    }
+  </style>
+  <div class="banner-sales" style="
+      z-index: 0;
+      background: #FF0000;
+      bottom: 3px;
+      border: 0px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+      margin-bottom: 20px;
+      ">
+    <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+      <p style="
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: italic;
+      padding: 18px 5px;
+      text-transform: uppercase;
+      margin: 0;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      ">
+        OPORTUNIDADES
+        <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+            type="submit"
+            href="https://www.decathlon.pt/deals-page/oportunidades/onsale-1/_/N-3h6htZ831l7z?opeco=opeco:sp_ciclismo_bar-opt"
+            target="_blank">DESCOBRE MAIS</a></span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Aqui esta a barra OPORTUNIDADES / SALDOS -->
+  <div class="sportpage-dkt">
+    <style>
+      @media only screen and (min-width: 400px) {
+        .cta-margin-sales {
+          margin-left: 50px;
+        }
+      }
+    </style>
+    <div class="banner-sales" style="
+      z-index: 0;
+      background: #82ca9ccc;
+      bottom: 3px;
+      border: 0px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+      margin-bottom: 20px;
+      ">
+      <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+        <p style="
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: italic;
+      padding: 18px 5px;
+      text-transform: uppercase;
+      margin: 0;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      ">
+          MOBILIDADE
+          <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+              type="submit" href="https://www.decathlon.pt/landing/mobilidade-urbana/_/R-a-mobilidade"
+              target="_blank">DESCOBRE MAIS</a></span>
+        </p>
+      </div>
+    </div>
+
+    <!--area de 3 colunas-->
+    <!-- DESTAQUE 1 -->
+    <div class="sportpage-columns" style="padding-bottom: 0px; padding-top: 0px;">
+      <style>
+        .sp-30._01b {
+          background-image: url("https://contents.mediadecathlon.com/p2096492/k$84149fd0bd031342d0b32dd82dea2a2a/924x924/ELOPS%20VAE%20VILLE%20ELOPS%20920E%20LF%20BLANC.webp");
+        }
+
+        @media only screen and (max-width: 900px) {
+          .sp-30._01b {
+            background-image: url("https://contents.mediadecathlon.com/p2250036/k$8258fbb7ad54d5be0bce20765ad0c733/400x400/ELOPS%20VAE%20VILLE%20ELOPS%20920E%20LF%20BLANC.webp");
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+          }
+        }
+      </style>
+      <a href="https://www.decathlon.pt/p/bicicleta-eletrica-de-cidade-elops-920-e-connect-lf/_/R-p-305573?opeco=opeco:sp_ciclismo_destaque1"
+        class="sp-30 _01b w-inline-block" style="height: 400px;" target="_blank">
+        <div class="plus-preco">
+          <div class="antes-preco riscado">
+            <span class="slashed">
+              1900€
+            </span>
+            <span class="text-span-5"><br>
+              -10%
+            </span>
+          </div>
+          <div class="preco-prod off">
+            <div class="preco off">
+              1700€
+            </div>
+          </div>
+        </div>
+        <div class="prod-titulo _3line">
+          <div class="prod-description">
+            <div class="marca">ELOPS 920E CONNECT (GPS)</div>
+            <h1 class="pro-desc">
+              Bicicleta geolocalizável!
+            </h1>
+          </div>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- DESTAQUE 2 -->
+      <style>
+        .sp-30._02b {
+          background-image: url("https://contents.mediadecathlon.com/p1692467/k$bd503e47aac6df5e6a5296f379026015/924x924/B'TWIN%20VELO%20PLIANT%20TILT%20500%20ORANGE.webp");
+        }
+
+        @media only screen and (max-width: 900px) {
+          .sp-30._02b {
+            background-image: url("https://contents.mediadecathlon.com/p1820126/k$f9625bd891928923548ea525d1e838b4/400x400/B'TWIN%20VELO%20PLIANT%20TILT%20500%20ORANGE.webp");
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+          }
+        }
+      </style>
+      <a href="https://www.decathlon.pt/p/bicicleta-dobravel-tilt-500/_/R-p-120070?opeco=opeco:sp_ciclismo_destaque2"
+        class="sp-30 _02b w-inline-block" style="height: 400px;" target="_blank">
+        <div class="plus-preco">
+          <div class="antes-preco riscado">
+            <span class="slashed">
+              369€
+            </span>
+            <span class="text-span-5"><br>
+              -18%
+            </span>
+          </div>
+          <div class="preco-prod off">
+            <div class="preco off">
+              300€
+            </div>
+          </div>
+        </div>
+        <div class="prod-titulo _3line">
+          <div class="prod-description">
+            <div class="marca">BICICLETA DOBRÁVEL TILT 500</div>
+            <h1 class="pro-desc">
+              Procura algo leve e eficiente?
+            </h1>
+            <div class="cta-embed w-embed">
+              <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- DESTAQUE 3 -->
+      <style>
+        .sp-30._03b {
+          background-image: url("https://contents.mediadecathlon.com/p2281225/k$009a7ce9eb11e39892edf2d76474cb5d/924x924/ELOPS%20VELO%20VILLE%20ELOPS%20520%20HF%20VERT.webp");
+        }
+
+        @media only screen and (max-width: 900px) {
+          .sp-30._03b {
+            background-image: url("https://contents.mediadecathlon.com/p2281225/k$009a7ce9eb11e39892edf2d76474cb5d/400x400/ELOPS%20VELO%20VILLE%20ELOPS%20520%20HF%20VERT.webp");
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+          }
+        }
+      </style>
+      <a href="https://www.decathlon.pt/p/bicicleta-de-cidade-elops-520-quadro-alto/_/R-p-168450?opeco=opeco:sp_ciclsmo_destaque3"
+        class="sp-30 _03b w-inline-block" style="height: 400px;" target="_blank">
+        <div class="plus-preco">
+          <div class="antes-preco riscado">
+            <span class="slashed">
+              299€
+            </span>
+            <span class="text-span-5"><br>
+              -16%
+            </span>
+          </div>
+          <div class="preco-prod off">
+            <div class="preco off">
+              250€
+            </div>
+          </div>
+        </div>
+        <div class="prod-titulo _3line">
+          <div class="prod-description">
+            <div class="marca">ELOPS 520 QUADRO ALTO</div>
+            <h1 class="pro-desc">
+              Pedalar de forma confortável!
+            </h1>
+          </div>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--AQUI COMEÇA AS NOVIDADES-->
+  <div class="sportpage-dkt" style="padding-bottom: 0px;">
+    <style>
+      @media only screen and (min-width: 400px) {
+        .cta-margin-sales {
+          margin-left: 50px;
+        }
+      }
+    </style>
+    <div class="banner-sales" style="
+      z-index: 0;
+      background: #8126a2;
+      bottom: 3px;
+      border: 0px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+      ">
+      <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+        <p style="
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: italic;
+      padding: 18px 5px;
+      text-transform: uppercase;
+      margin: 0;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      ">
+          NOVIDADES 2022
+          <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+              type="submit" href="https://www.decathlon.pt/novidades/_/N-3h6htZ1szrx1f?opeco=opeco:sp-ciclismo-barnovi"
+              target="_blank">DESCOBRE MAIS</a></span>
+        </p>
+      </div>
+    </div>
+
+    <!--area de 3 colunas-->
+
+    <!-- <div class="sportpage-columns">
+          <style>
+              .sp-30._05b {
+                  background-image: url("https://contents.mediadecathlon.com/p2096472/k$81d8466c816836788dfa6a89b06bff68/924x924/ELOPS%20VAE%20VILLE%20ELOPS%20920E%20LF%20BLANC.webp");
+              }
+  
+              @media only screen and (max-width: 900px) {
+                  .sp-30._05b {
+                      background-image: url("https://contents.mediadecathlon.com/p2096472/k$81d8466c816836788dfa6a89b06bff68/400x400/ELOPS%20VAE%20VILLE%20ELOPS%20920E%20LF%20BLANC.webp");
+                      width: 350px;
+                      height: 350px;
+                      border-radius: 5px;
+                      box-shadow: 0 5px 5px 0 #e2e2e2;
+                  }
+              }
+          </style>
+          <a href="https://www.decathlon.pt/p/btt-rockrider-xc-900-s-suspensao-total-29-carbono/_/R-p-325040?opeco=opeco:ciclismo-banner5"
+              class="sp-30 _05b w-inline-block" target="_blank">
+              <div class="preco-box w-embed">
+                  <div class="dkt-price__cartridge" style="color:black; background-color: #ffea28">
+                      899€
+                  </div>
+              </div>
+              <div class="prod-titulo _3line">
+                  <div class="prod-description">
+                      <div class="marca">BICICLETA ELOPS GEOLOCALIZÁVEL</div>
+                      <h1 class="pro-desc">
+                          Bicicleta com conectividade via bluetooth
+                      </h1>
+                      <div class="cta-embed w-embed">
+                          <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                      </div>
+                  </div>
+              </div>
+          </a>
+  
+          <style>
+              .sp-30._04b {
+                  background-image: url("https://contents.mediadecathlon.com/p2011299/k$a3d9bd8b355901e50f81c98b2451da9a/924x924/BTWIN%20VELO%20PLIANT%20OXYLANE%20TILT%20500%20E%20GRIS%20NOIR.webp");
+              }
+  
+              @media only screen and (max-width: 900px) {
+                  .sp-30._04b {
+                      background-image: url("https://contents.mediadecathlon.com/p2011299/k$a3d9bd8b355901e50f81c98b2451da9a/400x400/BTWIN%20VELO%20PLIANT%20OXYLANE%20TILT%20500%20E%20GRIS%20NOIR.webp");
+                      width: 350px;
+                      height: 350px;
+                      border-radius: 5px;
+                      box-shadow: 0 5px 5px 0 #e2e2e2;
+                  }
+              }
+          </style>
+          <a href="https://www.decathlon.pt/p/calcado-btt-gravel-race-900-ocre/_/R-p-334199?opeco=opeco:ciclismo-banner4"
+              class="sp-30 _04b w-inline-block" target="_blank">
+              <div class="preco-box w-embed">
+                  <div class="dkt-price__cartridge" style="color:black; background-color: #ffea28">
+                      90€
+                  </div>
+              </div>
+              <div class="prod-titulo _3line">
+                  <div class="prod-description">
+                      <div class="marca">CALÇADO RACE 900</div>
+                      <h1 class="pro-desc">
+                          Concebido para a prática do BTT e Gravel
+                      </h1>
+                  </div>
+                  <div class="cta-embed w-embed">
+                      <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                  </div>
+              </div>
+          </a>
+  
+          <style>
+              .sp-30._06b {
+                  background-image: url("https://contents.mediadecathlon.com/p2281144/k$18339b0b34a9bc504c081b9594ef1c30/924x924/ELOPS%20VELO%20VILLE%20ELOPS%20520%20LF%20BLEU%20CLAIR.webp");
+              }
+  
+              @media only screen and (max-width: 900px) {
+                  .sp-30._06b {
+                      background-image: url("https://contents.mediadecathlon.com/p2281144/k$18339b0b34a9bc504c081b9594ef1c30/400x400/ELOPS%20VELO%20VILLE%20ELOPS%20520%20LF%20BLEU%20CLAIR.webp");
+                      width: 350px;
+                      height: 350px;
+                      border-radius: 5px;
+                      box-shadow: 0 5px 5px 0 #e2e2e2;
+                  }
+              }
+          </style>
+          <a href="https://www.decathlon.pt/p/bicicleta-btt-race-740-nx-gx-eagle/_/R-p-323483?opeco=opeco:sp-ciclismo-banner6"
+              class="sp-30 _06b w-inline-block" target="_blank">
+              <div class="preco-box w-embed">
+                  <div class="dkt-price__cartridge" style="color:black; background-color: #ffea28">
+                      1800€
+                  </div>
+              </div>
+              <div class="prod-titulo _3line">
+                  <div class="prod-description">
+                      <div class="marca">BTT RACE 740 SRAM NX</div>
+                      <h1 class="pro-desc">
+                          BTT EM CARBONO A UM PREÇO ACESSÍVEL!
+                      </h1>
+                  </div>
+                  <div class="cta-embed w-embed">
+                      <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+                  </div>
+              </div>
+          </a>
+      </div> -->
+
+    <div>
+      <!-- AQUI ESTA O SLIDER -->
+      <link rel=" stylesheet" href="https://cdn.decathlon.pt/ciclismo/swiper-bundle.css">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <div class="swiper swiper1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/browse/c0-todos-os-desportos/c1-ciclismo/c2-equipamento-ciclista/_/N-p54z2b?opeco=opeco:sp_ciclismo_slider-1">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952150/k$23ab62230120cc3e508c540ca8feabea/480x480_sp_ciclismo_produto_o%20equipamento.webp"></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/p/bicicleta-de-cidade-de-longa-distancia-500-quadro-alto/_/R-p-305016?opeco=opeco:sp_ciclismo_slider-2">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952149/k$a770a126a424a49f64e581c17c594c15/480x480_sp_ciclismo_produto_bicicleta%20longa%20distancia.webp"></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/p/bicicleta-eletrica-de-cidade-elops-920-e-connect-lf/_/R-p-305573?opeco=opeco:sp_ciclismo_slider-3">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952151/k$3fb45ac04726cd3daecb7f1b03c0bd86/480x480_sp_ciclismo_produto_bicicleta%20eletrica.webp"></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/p/bicicleta-de-cidade-elops-520-quadro-baixo-azul-ganga/_/R-p-145734?opeco=opeco:sp_ciclismo_slider-4">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952152/k$c94e00fe804d8505ddd1ac551836ebaa/480x480_sp_ciclismo_produto_bicicleta%20classica%20de%20cidade.webp"></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/p/bicicleta-dobravel-tilt-500/_/R-p-120070?opeco=opeco:sp_ciclismo_slider-5">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952153/k$355a30b675f47eca0b79769e313379cd/480x480_sp_ciclismo_produto_bicicleta%20dobravel.webp"></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/p/bicicleta-de-cidade-single-speed-500/_/R-p-306292?opeco=opeco:sp_ciclismo_slider-6">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952154/k$34c9e41b4345b43ee958a23315a16322/480x480_sp_ciclismo_produto_bicicleta%20city%20speed.webp"></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://www.decathlon.pt/p/bicicleta-de-carga-eletrica-longtail-r500/_/R-p-329177?opeco=opeco:sp_ciclsmo_slider-7">
+                <img class="img-slide"
+                  src="https://contents.mediadecathlon.com/s952155/k$ea769513d771c149d5c53e2205a6e6ed/480x480_sp_ciclismo_produto_bicicleta%20carga%20longtrail.webp"></a>
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+        <!-- Button DESCOBRE MAIS -->
+        <!-- <div style="text-align: center; margin-top: 10px; padding-right: 45px;">
+          <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal">
+            <a type="submit"
+              href="https://www.decathlon.pt/p/bicicleta-dobravel-tilt-500/_/R-p-120070?mc=8678266&c=VERDE"
+              target="_blank"> DESCOBRE MAIS
+            </a>
+          </span>
+        </div> -->
+      </div>
+
+      <style>
+        .swiper-button-prev {
+          color: #000;
+        }
+
+        .swiper-button-next {
+          color: #000;
+        }
+
+        .swiper-container {
+          max-width: 1520px;
+          height: 480px;
+          margin-bottom: 40px;
+        }
+
+        .img-slide {
+          max-width: 100%;
+          height: 480px;
+        }
+
+        .swiper {
+          max-width: 100%;
+          height: 480px;
+          padding-top: 20px;
+        }
+
+        .swiper-slide {
+          max-width: 100%;
+          box-sizing: border-box;
+          height: 480px;
+          box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+        }
+
+        @media screen and (max-width: 900px) {
+          .swiper-slide a {
+            width: 100%;
+            display: block;
+          }
+
+          .swiper-slide a img {
+            min-width: 100%;
+            height: 100%;
+          }
+        }
+      </style>
+
+      <script src="https://cdn.decathlon.pt/ciclismo/swiper-bundle.min.js"></script>
+      <script>
+        //JS DO SLIDER
+        const swiper1 = new Swiper('.swiper1', {
+          speed: 450,
+          slidesPerView: 1,
+          spaceBetween: 10,
+          autoplay: {
+            delay: 7000,
+          },
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            800: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              loop: true,
+            }
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth < 960) {
+            console.log('mobile')
+          } else {
+            console.log('desktop')
+          }
+        }, true);
+      </script>
+    </div>
+
+    <!-- AQUI ESTA O BANNER -->
+    <div class="sportpage-dkt" style="padding-top: 20px;">
+
+      <style>
+        /* BACKGROUND DESKTOP */
+        /* LINK DO BANNER EM .webp 1512x345 */
+        .sportpage-fullbann.c {
+          background-image: url("https://contents.mediadecathlon.com/s926615/k$f9db75134e1360d8efa7acf56408b736/1512x345_banner%20sp.webp");
+          height: 345px;
+          border-radius: 5px;
+          box-shadow: 0 5px 5px 0 #e2e2e2;
+          display: flex;
+        }
+
+        /* BACKGROUND MOBILE */
+        /* LINK DO BANNER EM .webp 600x720 */
+        @media screen and (max-width: 900px) {
+          .sportpage-fullbann.c {
+            background-image: url("https://contents.mediadecathlon.com/p2114021/k$c00263e82d0875d910310ab5b2c34600/600x899/ELOPS%20VELOCARGO%20R900E.webp");
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+            display: flex;
+          }
+        }
+      </style>
+
+      <!--Preço imagens e links - se não tiver preço comentar
+      conselhos -> produtos blocos de oferta -> video
+      href com # e titulos de produto ou preço Lorem Ipsum-->
+
+      <!-- COLOCAR AQUI LINK DE DESTINO -->
+      <a href="https://www.decathlon.pt/p/bicicleta-de-carga-longtail-carregamento-traseiro-r500-eletrica/_/R-p-329177?opeco=opeco:sp_ciclismo_descobre-cargo-bike"
+        target="_blank">
+        <div class="sportpage-fullbann c">
+          <div class="prod-titulo full">
+            <div class="prod-description">
+              <div class="marca" style="text-align: center;">RECEBE 1400€ DE REEMBOLSO</div>
+              <h1 class="pro-desc" style="text-align: center;">
+                Na compra de uma bicicleta de carga,
+                candidata-te ao
+                incentivo ambiental.
+              </h1>
+            </div>
+            <div class="cta-embed w-embed">
+              <div class="cta-v2 " data-icon=">">DESCOBRE MAIS</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- AQUI ESTA O BANNER / GIF -->
+  <div class="sportpage-dkt">
+    <style>
+      /* BACKGROUND DESKTOP */
+      .sportpage-fullbann.d {
+        background-size: cover;
+        background-image: url('https://contents.mediadecathlon.com/s950381/k$e4f033839184499d3e7c37af5d6d6f68/1520x450/1520x450_banner_luz-v100-capacetes.webp');
+        height: 450px;
+        display: flex;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
+      }
+
+      /* BACKGROUND MOBILE */
+      @media screen and (max-width:900px) {
+        .sportpage-fullbann.d {
+          border-radius: 5px;
+          box-shadow: 0 5px 5px 0 #e2e2e2;
+          background-size: cover;
+          width: 400px;
+          height: 250px;
+          background-image: url('https://contents.mediadecathlon.com/p2174333/k$8f2d949214058748b17da7ad9300a57c/400x330/2985pt2396/3932xcr3249/ELOPS%20ECLAIRAGE%20VELO%20CL%20500.%20NOIR.webp');
+        }
+      }
+    </style>
+    <!--Preço imagens e links - se não tiver preço comentar
+      conselhos -> produtos blocos de oferta -> video
+      href com # e titulos de produto ou preço Lorem Ipsum-->
+    <a class="add-to-cart" data-model="300746" data-sku="2391250"
+      href="https://www.decathlon.pt/p/luz-led-frente-tras-usb-bicicleta-cl-500/_/R-p-186411?opeco=opeco:sp_ciclismo_descobre-luz"
+      target="_blank">
+      <div class="sportpage-fullbann d">
+        <div class="prod-titulo full">
+          <div class="prod-description">
+            <div class="marca" style="text-align: center;">
+              EQUIPA-TE COM ACESSÓRIOS PARA A TUA SEGURANÇA
+            </div>
+            <h1 class="pro-desc"></h1>
+            <div class="preco-box w-embed">
+              <!-- <div class="dkt-price__cartridge">3,90€</div> -->
+            </div>
+          </div>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE MAIS</div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
