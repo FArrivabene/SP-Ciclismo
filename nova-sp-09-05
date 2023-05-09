@@ -1,0 +1,1021 @@
+<style>
+    .plus-preco,
+    .preco {
+      background-color: transparent
+    }
+  
+    .plus-preco,
+    .preco-prod {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal
+    }
+  
+    .euro,
+    .preco {
+      font-family: 'Roboto Condensed', sans-serif
+    }
+  
+    .preco {
+      color: #000;
+      font-size: 20px;
+      font-style: normal
+    }
+  
+    .antes-preco,
+    .text-span-5 {
+      font-weight: 700
+    }
+  
+    .preco.off {
+      -ms-transform: none;
+      transform: none;
+      color: #fff;
+      font-size: 23px
+    }
+  
+    .plus-preco {
+      position: static;
+      left: auto;
+      top: -2%;
+      right: -2%;
+      bottom: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      margin-top: 12px;
+      margin-right: 0;
+      padding: 0 10px;
+      float: right;
+      clear: none;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: transparent;
+      font-size: 22px
+    }
+  
+    .preco-prod {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 26px;
+      margin-left: 5px;
+      padding: 3px 5px 3px;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-color: #ffea2d;
+      color: #fff;
+      text-align: center
+    }
+  
+    .preco-prod.off {
+      margin-left: -5px;
+      background-color: #e20c18;
+      background-image: linear-gradient(220deg, #f40000, #d90000);
+    }
+  
+    .preco-prod.off1 {
+      margin-left: -5px;
+      background-color: #feeb2d;
+      background-image: linear-gradient(220deg, #feeb2d, #feeb2d);
+    }
+  
+    .euro {
+      font-size: .6em
+    }
+  
+    .antes-preco {
+      margin-right: 8px;
+      margin-left: auto;
+      color: #000;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: right;
+      background-color: #feeb2d;
+      padding: 3px;
+    }
+  
+    .text-span-5 {
+      color: #e22418;
+      font-size: 15px;
+      line-height: 10px
+    }
+  
+    .slashed {
+      font-weight: 700;
+      text-decoration: line-through
+    }
+  
+    @media screen and (max-width:991px) {
+      .plus-preco {
+        margin-top: 5px;
+        margin-right: 4px;
+        padding: 4px
+      }
+    }
+  
+    @media screen and (max-width:767px) {
+      .plus-preco {
+        margin-top: 4px;
+        margin-right: 4px;
+        padding: 4px
+      }
+    }
+  
+    @media screen and (max-width:479px) {
+  
+      .plus-preco,
+      .preco-prod {
+        -webkit-box-direction: normal
+      }
+  
+      .preco {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 16px;
+        line-height: 11px;
+        font-weight: 700
+      }
+  
+      .preco.off {
+        font-size: 15px
+      }
+  
+      .plus-preco {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 10px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 2px 0;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center
+      }
+  
+      .preco-prod {
+        height: auto;
+        margin-bottom: auto;
+        padding: 5px;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end
+      }
+  
+      .preco-prod.off {
+        margin-left: 0;
+        padding: 6px 3px
+      }
+  
+      .euro {
+        font-size: 14px
+      }
+  
+      .antes-preco {
+        margin-right: 7px;
+        font-size: 8px
+      }
+  
+      .antes-preco.riscado {
+        margin-right: 5px
+      }
+  
+      .text-span-5 {
+        font-size: 12px;
+        line-height: 9px
+      }
+  
+      .slashed {
+        font-size: 10px
+      }
+    }
+  
+    section#sportspage__flooradvice {
+      padding-left: 0 !important;
+    }
+  
+    section#sportspage__freeHtmlfloor {
+      padding-left: 0 !important;
+    }
+  
+    section#sportspage__floorsav {
+      padding-left: 0;
+    }
+  </style>
+  
+  <style>
+    /* fix sidebar */
+    .sportspage__introfloor .sportspage__nav-item {
+      display: none;
+    }
+  
+    .sportspage .sportspage__navigation {
+      display: none;
+      visibility: hidden;
+      width: 0px;
+    }
+  
+    .sportspage .sportspage__floor {
+      padding-left: 0px !important;
+    }
+  
+    .sportspage .sportspage__freeHtmlfloor {
+      padding-left: 0px !important;
+    }
+  
+    @media screen and (min-width: 801px) {
+      .sportspage__floors {
+        padding-left: 0px !important;
+      }
+  
+      .sportspage__introfloor .card {
+        text-align: center;
+      }
+  
+      .sportspage__introfloor h2 {
+        font-size: 36px;
+      }
+  
+      .sportspage__introfloor p {
+        font-size: 17px;
+        margin-top: 20px;
+      }
+    }
+  
+    /* end of fix sidebar */
+  </style>
+  
+  <style>
+    .cta-embed {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto
+    }
+  
+    .sportpage-dkt {
+      padding-bottom: 40px;
+      max-width: 1520px;
+      margin: auto;
+    }
+  
+    #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.a>div>div.prod-description>div.preco-box.w-embed {
+      margin: 5px 0
+    }
+  
+    #sportspage__freeHtmlfloor>div.sportpage-dkt>div.sportpage-fullbann.b>div>div.prod-description>div.preco-box.w-embed {
+      margin: 5px 0
+    }
+  
+    .sportpage-columns {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 380px;
+      padding-top: 40px;
+      padding-bottom: 40px
+    }
+  
+    .sp-50 {
+      background-size: cover;
+      background-position: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 45%;
+      margin-right: auto;
+      margin-left: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      box-shadow: 0 5px 5px 0 #e2e2e2;
+      text-decoration: none
+    }
+  
+    .sp-50._01a {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll
+    }
+  
+    .sp-50._02a {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .prod-titulo {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 80px;
+      margin-top: auto;
+      padding: 10px;
+      background-color: rgb(0 0 0 / 50%)
+    }
+  
+    .prod-titulo._3line {
+      display: block;
+      height: 120px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center
+    }
+  
+    .prod-titulo._4line {
+      display: block;
+      height: 90px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center
+    }
+  
+    .prod-titulo.full {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 40%;
+      height: auto;
+      margin-right: auto;
+      margin-bottom: auto;
+      margin-left: 40px
+    }
+  
+    .pro-desc {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #fff;
+      font-size: 14px;
+      line-height: 18px;
+      font-style: italic;
+      font-weight: 400;
+      text-transform: uppercase
+    }
+  
+    .prod-description {
+      display: block;
+      margin-top: auto;
+      margin-bottom: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+  
+    .marca {
+      font-family: 'Roboto Condensed', sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 700
+    }
+  
+    .promocao-destaques {
+      color: #efefef;
+      background-color: #e22418;
+      padding: 4px 4px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 2px;
+      border: #efefef 1px solid;
+      transform: rotate(-5deg);
+    }
+  
+    .preco-box {
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-left: auto;
+      background-color: #feeb2d;
+      width: max-content
+    }
+  
+    .sp-30 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 30%;
+      margin-right: auto;
+      margin-left: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      box-shadow: 0 5px 5px 0 #e2e2e2;
+      text-decoration: none
+    }
+  
+    .sp-30._01b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .sp-30._02b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .sp-30._03b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .sp-30._04b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .sp-30._05b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .sp-30._06b {
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .sportpage-fullbann {
+      background-position: 80% 50%;
+      background-size: cover;
+      background-repeat: no-repeat
+    }
+  
+    .vr-box {
+      overflow: hidden;
+    }
+  
+    .vr-box iframe {
+      width: 80%;
+      height: 720px;
+      display: flex;
+      margin: 0 auto;
+    }
+  
+    @media screen and (max-width:1200px) {
+      .vr-box iframe {
+        width: 100%;
+      }
+  
+      .sportpage-fullbann.a {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat
+      }
+  
+      .sportpage-fullbann.b {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat
+      }
+  
+      .sportpage-fullbann.c {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat
+      }
+  
+      .sportpage-fullbann.d {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+  
+      .vr-box {
+        overflow: hidden;
+      }
+  
+      .vr-box iframe {
+        width: 80%;
+        height: 720px;
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+  
+    @media screen and (max-width:1200px) {
+      .vr-box iframe {
+        width: 100%;
+      }
+  
+      .sportpage-columns {
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+      }
+  
+      .sp-50 {
+        width: 100%;
+        height: 280px;
+        margin-top: 10px
+      }
+  
+      .prod-titulo.full {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: auto 0 -20px 0
+      }
+  
+      .sp-30 {
+        width: 100%;
+        height: 280px;
+        margin-top: 10px
+      }
+    }
+  </style>
+  
+  <!-- BARRA ESCRITA ACIMA DO SLIDER -->
+  <style type="text/css">
+    .encart-video .titre-video {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      position: relative;
+    }
+  
+    .encart-video .titre-video:before {
+      position: absolute;
+      content: "";
+      border-top: solid 1px #d9d9d9;
+      width: -webkit-calc(100% - 140px);
+      width: -moz-calc(100% - 140px);
+      width: calc(100% - 140px);
+      left: 70px;
+      top: 50%;
+    }
+  
+    .encart-video .titre-video p {
+      color: #0082C3;
+      background: #efefef;
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      display: inline;
+      padding: 0 20px;
+      position: relative;
+    }
+  
+    .encart-video .responsive-video {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0;
+    }
+  
+    .encart-video .responsive-video .wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 0px;
+      height: 0;
+      overflow: hidden;
+    }
+  
+    .encart-video .responsive-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  
+  <!-- AQUI ESTÁ O CSS DO SLIDER -->
+  <style>
+    .escrita-slide {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      background-color: rgb(0 0 0 / 5%);
+      /*padding-top: 340px; */
+      margin-bottom: 0px;
+      bottom: 0px;
+    }
+  
+    .swiper-button-prev {
+      color: #000;
+    }
+  
+    .swiper-button-next {
+      color: #000;
+    }
+  
+    .swiper-container {
+      max-width: 1520px;
+      height: 292px;
+      margin-bottom: 40px;
+    }
+  
+    .img-slide {
+      display: flex;
+      width: 100%;
+      height: 292px;
+    }
+  
+    .swiper {
+      max-width: 100%;
+      height: 292px;
+      padding-top: 20px;
+    }
+  
+    .swiper-slide {
+      max-width: 100%;
+      box-sizing: border-box;
+      height: 292px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+    }
+  
+    @media screen and (max-width: 900px) {
+      .swiper-slide a {
+        width: 100%;
+      }
+  
+      .swiper-slide a img {
+        min-width: 100%;
+        height: 100%;
+      }
+    }
+  </style>
+  
+  <div class="sportpage-dkt">
+    <!-- AQUI ESTA O BANNER / GIF -->
+  <div class="sportpage-dkt">
+    <style>
+      /* BACKGROUND DESKTOP */
+      .sportpage-fullbann.d {
+        background-size: cover;
+        background-image: url('https://contents.mediadecathlon.com/s926615/k$f9db75134e1360d8efa7acf56408b736/1512x345_banner%20sp.webp');
+        height: 345px;
+        display: flex;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
+      }
+      .marca{
+        text-align: center;
+      }
+
+      /* BACKGROUND MOBILE */
+      @media screen and (max-width:900px) {
+        .sportpage-fullbann.d {
+          border-radius: 5px;
+          box-shadow: 0 5px 5px 0 #e2e2e2;
+          background-size: cover;
+          width: 400px;
+          height: 500px;
+          background-image: url('https://contents.mediadecathlon.com/p2482758/k$0d3746dd64304fd045030b7a0ce76f87/400x500/ELOPS%20VELOCARGO%20R500E.webp');
+        }
+
+        .prod-titulo.full{
+            flex-direction: column;
+        }
+
+        .btn-right{
+            margin-right: 75px;
+        }
+        .marca{
+            text-align: center;
+        }
+      }
+    </style>
+    <!--Preço imagens e links - se não tiver preço comentar
+      conselhos -> produtos blocos de oferta -> video
+      href com # e titulos de produto ou preço Lorem Ipsum-->
+    <a class="add-to-cart"
+      href="https://www.decathlon.pt/p/bicicleta-eletrica-de-carga-traseira-longtail-r500-e/_/R-p-329177?opeco=opeco:sp_ciclismo_cargo-bike&type=opeco"
+      target="_blank">
+      <div class="sportpage-fullbann d">
+        <div class="prod-titulo full">
+          <div class="prod-description">
+            <div class="marca">
+                INCENTIVO DE APOIO À COMPRA DE BICICLETAS ELÉTRICAS 2023
+            </div>
+            <h1 class="pro-desc"></h1>
+            <div class="preco-box w-embed">
+              <!-- <div class="dkt-price__cartridge">3,90€</div> -->
+            </div>
+          </div>
+          <div class="cta-embed w-embed" style="text-align: center;">
+            <div class="cta-v2 btn-right" data-icon=">">DESCOBRE MAIS AQUI</div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="sportpage-dkt">
+    <style>
+      @media only screen and (min-width: 400px) {
+        .cta-margin-sales {
+          margin-left: 50px;
+        }
+      }
+    </style>
+    <!--area de 3 colunas-->
+    <!-- DESTAQUE 1 -->
+    <div class="sportpage-columns" style="padding-bottom: 0px; padding-top: 0px;">
+      <style>
+        .sp-30._01b {
+          background-image: url("https://contents.mediadecathlon.com/p2161969/k$4046d13a60135a83e02e266935f9c99b/924x924/2240pt2240/4480xcr4480/ROCKRIDER%20VTT%20E-ST100%20BLEU%2027,5%22.webp");
+        }
+  
+        @media only screen and (max-width: 900px) {
+          .sp-30._01b {
+            background-image: url("https://contents.mediadecathlon.com/p2161969/k$4046d13a60135a83e02e266935f9c99b/400x400/2240pt2240/4480xcr4480/ROCKRIDER%20VTT%20E-ST100%20BLEU%2027,5%22.webp");
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+          }
+  
+          .promocao-destaques {
+            margin-left: 20px;
+          }
+        }
+      </style>
+      <a href="https://www.decathlon.pt/p/bicicleta-btt-eletrica-e-st-100-azul-27-5/_/R-p-309736?opeco=opeco:sp_ciclismo_destaque1"
+        class="sp-30 _01b w-inline-block" style="height: 400px;" target="_blank">
+        <div class="plus-preco">
+          <!-- STICEKR DESTAQUES -->
+          <!-- <div class="promocao-destaques" style="display: flex;">
+                PROMOÇÃO
+              </div>
+              <div class="antes-preco riscado">
+                <span class="slashed">
+                  1499€
+                </span>
+                <span class="text-span-5"><br>
+                  -13%
+                </span>
+              </div> 
+              <div class="preco-prod off1" style="margin-right: 10px;">
+                <div class="preco off1">
+                  949€
+                </div>
+              </div> -->
+        </div>
+        <div class="prod-titulo _3line">
+          <div class="prod-description">
+            <div class="marca">BTT ELÉTRICA E-ST 100</div>
+            <h1 class="pro-desc">
+              Motor com binário de 42Nm a 250W.
+            </h1>
+          </div>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+          </div>
+        </div>
+      </a>
+  
+      <!-- DESTAQUE 2 -->
+      <style>
+        .sp-30._02b {
+          background-image: url("https://contents.mediadecathlon.com/p2230589/k$69c86db01ac36a2de399783443ad67ec/924x924/4094pt2732/5464xcr5464/RIVERSIDE%20RIVERSIDE%20500E%20GRIS%20VERT%20AH22%20PE22.webp");
+        }
+  
+        @media only screen and (max-width: 900px) {
+          .sp-30._02b {
+            background-image: url("https://contents.mediadecathlon.com/p2230589/k$69c86db01ac36a2de399783443ad67ec/400x400/4094pt2732/5464xcr5464/RIVERSIDE%20RIVERSIDE%20500E%20GRIS%20VERT%20AH22%20PE22.webp");
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+          }
+  
+          .promocao-destaques {
+            margin-left: 20px;
+          }
+        }
+      </style>
+      <a href="https://www.decathlon.pt/p/bicicleta-de-trekking-eletrica-riverside-500-e-cinzento/_/R-p-169143?opeco=opeco:sp_ciclismo_destaque2"
+        class="sp-30 _02b w-inline-block" style="height: 400px;" target="_blank">
+        <div class="plus-preco">
+          <!-- STICEKR DESTAQUES -->
+          <!-- <div class="promocao-destaques" style="display: flex;">
+                SALDOS
+              </div> -->
+          <!-- <div class="antes-preco riscado">
+                <span class="slashed">
+                  30€
+                </span>
+                <span class="text-span-5"><br>
+                  -20%
+                </span>
+              </div> 
+              <div class="preco-prod off1" style="margin-right: 10px;">
+                <div class="preco off1">
+                  1119€
+                </div>
+              </div> -->
+        </div>
+        <div class="prod-titulo _3line">
+          <div class="prod-description">
+            <div class="marca">TREKKING ELÉTRICA RIVERSIDE 500 E</div>
+            <h1 class="pro-desc">
+              Autonomia, pedala até 90km no modo 1.
+            </h1>
+            <div class="cta-embed w-embed">
+              <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+            </div>
+          </div>
+        </div>
+      </a>
+  
+      <!-- DESTAQUE 3 -->
+      <style>
+        .sp-30._03b {
+          background-image: url("https://contents.mediadecathlon.com/p2096466/k$dce99a04ae5123ae948d9407b9bc2303/924x924/ELOPS%20VAE%20VILLE%20ELOPS%20920E%20LF%20BLANC.webp");
+        }
+  
+        @media only screen and (max-width: 900px) {
+          .sp-30._03b {
+            background-image: url("https://contents.mediadecathlon.com/p2250036/k$8258fbb7ad54d5be0bce20765ad0c733/400x400/ELOPS%20VAE%20VILLE%20ELOPS%20920E%20LF%20BLANC.webp");
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 #e2e2e2;
+          }
+  
+          .promocao-destaques {
+            margin-left: 20px;
+          }
+        }
+      </style>
+      <a href="https://www.decathlon.pt/p/bicicleta-eletrica-de-cidade-elops-920-e-connect-lf/_/R-p-305573?opeco=opeco:sp_ciclismo_destaque3"
+        class="sp-30 _03b w-inline-block" style="height: 400px;" target="_blank">
+        <div class="plus-preco">
+          <!-- STICEKR DESTAQUES -->
+          <!-- <div class="promocao-destaques" style="display: flex;">
+                PROMOÇÃO
+              </div>
+              <div class="antes-preco riscado">
+                <span class="slashed">
+                  269€
+                </span>
+                <span class="text-span-5"><br>
+                  -7%
+                </span>
+              </div>
+              <div class="preco-prod off1" style="margin-right: 10px;">
+                <div class="preco off1">
+                  1649€
+                </div>
+              </div> -->
+        </div>
+        <div class="prod-titulo _3line">
+          <div class="prod-description">
+            <div class="marca">ELOPS ELÉTRICA 920 E Connect</div>
+            <h1 class="pro-desc">
+              Liga a bicicleta ao telemóvel.
+            </h1>
+          </div>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <!--BARRA DAS NOVIDADES-->
+  <div class="sportpage-dkt" style="padding-bottom: 0px;">
+    <style>
+      @media only screen and (min-width: 400px) {
+        .cta-margin-sales {
+          margin-left: 50px;
+        }
+      }
+    </style>
+    <div class="banner-sales" style="
+                  z-index: 0;
+                  background: #8126a2;
+                  bottom: 3px;
+                  border: 0px solid rgb(0, 0, 0);
+                  border-radius: 5px;
+                  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px 0px;
+                  ">
+      <div class="banner-sales-wth-btn" style="border-radius: 10px; display: flex">
+        <p style="
+                  color: #fff;
+                  font-size: 18px;
+                  font-weight: bold;
+                  font-stretch: condensed;
+                  font-style: italic;
+                  padding: 18px 5px;
+                  text-transform: uppercase;
+                  margin: 0;
+                  position: relative;
+                  text-align: center;
+                  width: 100%;
+                  ">
+          NOVIDADES 2023
+          <span class="cta-v2 cta-v2--s cta-margin-sales" type="submit" data-icon=">" style="font-style: normal"><a
+              type="submit" href="https://www.decathlon.pt/novidades/_/N-3h6htZ1szrx1f?opeco=opeco:sp-ciclismo-barnovi"
+              target="_blank">DESCOBRE MAIS</a></span>
+        </p>
+      </div>
+    </div>
+  
+  
+      <!-- AQUI ESTÁ O JS DO SLIDER -->
+      <script src="https://cdn.decathlon.pt/ciclismo/swiper-bundle.min.js"></script>
+      <script>
+        //JS DO SLIDER
+        const swiper1 = new Swiper('.swiper1', {
+          speed: 450,
+          slidesPerView: 1,
+          spaceBetween: 10,
+          autoplay: {
+            delay: 5000,
+          },
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            800: {
+              slidesPerView: 5,
+              spaceBetween: 10,
+              loop: true,
+            }
+          }
+        });
+  
+        window.addEventListener("resize", function () {
+          if (window.innerWidth < 960) {
+            console.log('mobile')
+          } else {
+            console.log('desktop')
+          }
+        }, true);
+      </script>
+    </div>
+  </div>
+</div>
