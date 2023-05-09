@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="https://www.decathlon.pt/static/css/sp.css">
+<div class="sportpage-decathlon">
+
+<!--CTAS SERVIÇOS-->
+<div class="sportpage-colunas pictos-servicos">
+
+<a href="https://aluguer.decathlon.pt/" target="_blank" class="sportpage-bar links" style="background-color: #252525;">
+<h2 class="titulo-banner-sp">ALUGUER</h2></a>    
+
+<a href="https://www.decathlon.pt/special-page/produtossegundavida/_/N-annare" target="_blank" class="sportpage-bar links" style="background-color: #4D6F56;">
+<h2 class="titulo-banner-sp">SEGUNDA VIDA</h2></a>   
+
+<a href="https://support.decathlon.pt/" target="_blank" class="sportpage-bar links" style="background-color: #EC6508;">
+<h2 class="titulo-banner-sp">PÓS-VENDA</h2></a>   
+
+<a href="https://www.decathlon.pt/novidades/_/N-1szrx1f" class="sportpage-bar links" style="background-color: #8126A1;">
+<h2 class="titulo-banner-sp">NOVIDADES</h2></a>   
+
+</div>
+<!-------------------->
+
+<div class="sportpage-dkt">
+    <!-- AQUI ESTA O BANNER / GIF -->
+  <div class="sportpage-dkt">
+    <style>
+      /* BACKGROUND DESKTOP */
+      .sportpage-fullbann.d {
+        background-size: cover;
+        background-image: url('https://contents.mediadecathlon.com/s926615/k$f9db75134e1360d8efa7acf56408b736/1512x345_banner%20sp.webp');
+        height: 345px;
+        display: flex;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px 0 #e2e2e2;
+      }
+
+      /* BACKGROUND MOBILE */
+      @media screen and (max-width:900px) {
+        .sportpage-fullbann.d {
+          border-radius: 5px;
+          box-shadow: 0 5px 5px 0 #e2e2e2;
+          background-size: cover;
+          width: 400px;
+          height: 250px;
+          background-image: url('https://contents.mediadecathlon.com/p2174333/k$8f2d949214058748b17da7ad9300a57c/400x330/2985pt2396/3932xcr3249/ELOPS%20ECLAIRAGE%20VELO%20CL%20500.%20NOIR.webp');
+        }
+      }
+    </style>
+    <!--Preço imagens e links - se não tiver preço comentar
+      conselhos -> produtos blocos de oferta -> video
+      href com # e titulos de produto ou preço Lorem Ipsum-->
+    <a class="add-to-cart" data-model="300746" data-sku="2391250"
+      href="https://www.decathlon.pt/p/luz-led-frente-tras-usb-bicicleta-cl-500/_/R-p-186411?opeco=opeco:sp_ciclismo_descobre-luz"
+      target="_blank">
+      <div class="sportpage-fullbann d">
+        <div class="prod-titulo full">
+          <div class="prod-description">
+            <div class="marca">
+                INCENTIVO DE APOIO À COMPRA DE BICICLETAS ELÉTRICAS 2023
+            </div>
+            <h1 class="pro-desc"></h1>
+            <div class="preco-box w-embed">
+              <!-- <div class="dkt-price__cartridge">3,90€</div> -->
+            </div>
+          </div>
+          <div class="cta-embed w-embed">
+            <div class="cta-v2" data-icon=">">DESCOBRE AQUI A CARGO BIKE</div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+<div class="sportpage-colunas">
+
+<!--COLUNA 01a-->
+<a href="#####" class="coluna 01a" style="background-image: url(https://contents.mediadecathlon.com/p2488069/k$485e8cf620dffe263e6e10f3380184be/muzi%201.webp);">
+<div class="content-colsp"><div class="conteudo-bannersp">
+<h2 class="titulo-banner-sp">TREKKING ELÉTRICA RIVERSIDE 500 E</h2>
+<p class="desc-banner-sp">AUTONOMIA, PEDALA ATÉ 80KM NO MODO 1</p>
+</div></div></a>
+<!-------------------->
+
+<!--COLUNA 02a-->
+<a href="#####" class="coluna 02a" style="background-image: url(https://contents.mediadecathlon.com/p2489637/k$9cacd7617e16a7265ae19405ffd61069/DOMYOS%20SHORT%20DOUBLE%20W500%20TG%20PE23.jpg);">
+<div class="content-colsp"><div class="conteudo-bannersp">
+<h2 class="titulo-banner-sp">BTT ELÉTRICA E-ST 100</h2>
+<p class="desc-banner-sp">MOTOR COM BINÁRIO DE 42NM A 250W.</p>
+</div></div></a>
+<!-------------------->
+
+<!--COLUNA 03a-->
+<a href="#####" class="coluna 03a" style="background-image: url(https://contents.mediadecathlon.com/p2489610/k$80f04c9f164fc7b53e1d807ebbfa4bda/ROCKRIDER%20CASQUE%20VTT%20ST%20500%20NOIR.jpg);">
+<div class="content-colsp"><div class="conteudo-bannersp">
+<h2 class="titulo-banner-sp">ELOPS ELÉTRICA 920 E CONNECT</h2>
+<p class="desc-banner-sp">LIGA A BICICLETA AO TELEMÓVEL.</p>
+</div></div></a>
+<!-------------------->
+
+</div>
+
+<!--BARRA COM CTA -->
+<a href="https://www.decathlon.pt/deals-page/oportunidades/onsale-1/_/N-831l7z" target="_blank" class="sportpage-bar" style="background-color: #EE000D;">
+<div class="spbar-texto"><h2 class="titulo-cta-bar-sp">%% OPORTUNIDADES %%</h2></div>
+<div class="spbar-cta"><div class="cta-v2" data-icon=">">SABER MAIS</div></div></a>
+<!-------------------->
+
+<div class="sportpage-colunas">
+
+<!--COLUNA 01b-->
+<a href="#####" class="coluna 01b" style="background-image: url(https://contents.mediadecathlon.com/p2488488/k$93ce3f1e3c82818c15c46153c31a0097/DOMYOS%20DOMYOS%20BIKING%20900E%20PE23.jpg);">
+<div class="content-colsp"><div class="conteudo-bannersp">
+<h2 class="titulo-banner-sp">SUPORTE DE SOLO 5 BICICLETAS</h2>
+<p class="desc-banner-sp">PODE FIXAR ESTE SUPORTE NO CHÃO OU NA PAREDE</p>
+</div></div></a>
+<!-------------------->
+
+<!--COLUNA 02b-->
+<a href="#####" class="coluna 02b" style="background-image: url(https://contents.mediadecathlon.com/p2488272/k$0fb8d52c1867bc575c28ad1e7c5e863a/SUBEA%20MASQUE%20EASYBREATH%20500%20GRIS%20PE23%20AH23.jpg);">
+<div class="content-colsp"><div class="conteudo-bannersp">
+<h2 class="titulo-banner-sp">ELOPS ELÉTRICA LD 500</h2>
+<p class="desc-banner-sp">AUTONOMIA DE ATÉ 115 KM NO MODO 1</p>
+</div></div></a>
+<!-------------------->
+
+<!--COLUNA 03b-->
+<a href="#####" class="coluna 03b" style="background-image: url(https://contents.mediadecathlon.com/p2487839/k$d1f6aa683b4c76b797e28e0e99645453/Chaussure%20Predator%20Accuracy%203%20Laceless%20FG%20Adulte.jpg);">
+<div class="content-colsp"><div class="conteudo-bannersp">
+<h2 class="titulo-banner-sp">BICICLETA DE CARGA LONGTAIL R500 E</h2>
+<p class="desc-banner-sp">PERMITIR-TE-Á TRANSPORTAR ATÉ 170 KG DE CARGA (EXCLUINDO O PESO DA BICICLETA)</p>
+</div></div></a>
+<!-------------------->
+
+</div>
+</div>
